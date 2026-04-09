@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Into the Woods</title>
+  <script defer data-domain="chipnesser.github.io" src="https://plausible.io/js/script.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -36,18 +37,18 @@
     <section class="hero-card">
       <div class="hero-copy">
         <p class="eyebrow">Into the Woods</p>
+        <div id="location-tabs" class="location-tabs" aria-label="Choose a region"></div>
+        <p id="location-name" class="location-name">Madison, Wisconsin</p>
         <h1>Where Should We Go Hiking?</h1>
         <p class="intro">
-          Tap a mood, get a trailhead, check the weather, and decide whether the post-hike pilgrimage
-          to Frostie Freeze feels righteous today.
+          Tap a mood, get a trailhead, check the weather, and keep the day simple.
         </p>
         <div class="button-row">
           <button id="quick-dash-btn" class="choice-btn quick" type="button">Quick Dash</button>
           <button id="more-time-btn" class="choice-btn scenic" type="button">I Have a Little More Time</button>
+          <button id="all-day-btn" class="choice-btn scenic" type="button" hidden>We&apos;ve got all day</button>
         </div>
-        <p class="helper">
-          Slightly seasonally weighted, gently whimsical, and very open to future tinkering.
-        </p>
+        <p id="location-note" class="helper">A small list of nearby wandering options.</p>
       </div>
     </section>
 
@@ -55,7 +56,7 @@
       <div class="result-head">
         <div>
           <p id="bucket-label" class="eyebrow">Choose a distance bucket</p>
-        <h2 id="trail-name" aria-live="polite">A trailhead adventure awaits</h2>
+          <h2 id="trail-name" aria-live="polite">A trailhead adventure awaits</h2>
         </div>
         <button id="reroll-btn" class="reroll-btn" type="button" disabled>Spin Again</button>
       </div>
@@ -64,9 +65,12 @@
         Pick a button above and I&apos;ll pull a trailhead from your list.
       </p>
 
+      <p id="sunset-line" class="sunset-line" hidden></p>
+      <p id="crowd-line" class="crowd-line" hidden></p>
+
       <div class="stats-grid">
         <article class="stat">
-          <span>Drive From Willy Street Co-op</span>
+          <span id="origin-label">Drive From Willie Street Co-op</span>
           <strong id="coop-drive">-</strong>
         </article>
         <article class="stat">
@@ -74,11 +78,11 @@
           <strong id="trail-length">-</strong>
         </article>
         <article class="stat">
-          <span>Drive To Frostie Freeze</span>
+          <span id="post-hike-label">Drive To Frostie Freeze</span>
           <strong id="frosty-drive">-</strong>
         </article>
         <article class="stat">
-          <span>Seasonal Nudge</span>
+          <span>Trail Feel</span>
           <strong id="season-note">-</strong>
         </article>
       </div>
@@ -132,13 +136,16 @@
         <a id="frosty-link" class="action-link disabled" href="#" target="_blank" rel="noreferrer">Route To Frostie Freeze</a>
       </div>
 
-      <p class="actions-note">
+      <p id="actions-note" class="actions-note">
         Map links use your current location if you allow it, otherwise they start from Willy Street Co-op.
       </p>
 
       <p class="footnote">
-        Trail lengths and drive times are starter estimates. Weather is fetched live from Open-Meteo when
-        you pick a trail.
+        Drive times and some trailhead details are starter estimates. Weather is fetched live from Open-Meteo.
+      </p>
+
+      <p class="support-note">
+        <a id="support-link" href="#" target="_blank" rel="noreferrer">support your local trail alliance</a>
       </p>
     </section>
   </main>
