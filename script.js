@@ -396,11 +396,26 @@ async function getOriginForMaps() {
 
 async function openDirections(destination) {
   if (!currentTrail) return;
+  const openedWindow = window.open("", "_blank");
+
+  if (!openedWindow) {
+    els.weatherStatus.textContent = "Your browser blocked the map pop-up. Try again and allow pop-ups.";
+    return;
+  }
+
+  openedWindow.document.write("<title>Opening Maps...</title><p style='font-family: sans-serif; padding: 1rem;'>Opening Google Maps...</p>");
   els.weatherStatus.textContent = "Opening maps...";
-  const origin = await getOriginForMaps();
-  const url = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}`;
-  window.open(url, "_blank", "noopener,noreferrer");
-  els.weatherStatus.textContent = `Conditions at ${currentTrail.name}`;
+
+  try {
+    const origin = await getOriginForMaps();
+    const url = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}`;
+    openedWindow.location.replace(url);
+  } catch (error) {
+    const fallbackUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(WILLY_STREET_COOP_ADDRESS)}&destination=${encodeURIComponent(destination)}`;
+    openedWindow.location.replace(fallbackUrl);
+  } finally {
+    els.weatherStatus.textContent = `Conditions at ${currentTrail.name}`;
+  }
 }
 
 async function loadWeather(trail) {
