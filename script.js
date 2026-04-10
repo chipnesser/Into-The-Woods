@@ -837,6 +837,470 @@ const nederlandTrails = [
   }
 ];
 
+doorCountyTrails.push(
+  {
+    name: "Potawatomi State Park",
+    nearTown: "Sturgeon Bay",
+    mapQuery: "Potawatomi State Park trailhead Sturgeon Bay WI",
+    vibe: "tower views, mixed woods, big-park wandering",
+    crowdBias: "medium",
+    seasonBias: "all",
+    notes: "strong southern Door option when you want a full park day",
+    doorCountyTier: "middle",
+    trailLength: "2.0-7.0 mi",
+    coopDrive: "43 min",
+    postHikeDrive: "36 min"
+  },
+  {
+    name: "Crossroads at Big Creek",
+    nearTown: "Sturgeon Bay",
+    mapQuery: "Crossroads at Big Creek trail Sturgeon Bay WI",
+    vibe: "nature-center calm and easy walking",
+    crowdBias: "low",
+    seasonBias: "all",
+    notes: "very usable lower-key option",
+    doorCountyTier: "bside",
+    trailLength: "1.0-3.0 mi",
+    coopDrive: "39 min",
+    postHikeDrive: "33 min"
+  },
+  {
+    name: "The Ridges Sanctuary",
+    nearTown: "Baileys Harbor",
+    mapQuery: "The Ridges Sanctuary trail Baileys Harbor WI",
+    vibe: "boardwalks, boreal atmosphere, delicate quiet",
+    crowdBias: "medium",
+    seasonBias: "all",
+    notes: "special-feeling but gentler than the headline bluff parks",
+    doorCountyTier: "middle",
+    trailLength: "1.5-5.0 mi",
+    coopDrive: "18 min",
+    postHikeDrive: "14 min"
+  },
+  {
+    name: "Ellison Bluff State Natural Area",
+    nearTown: "Ellison Bay",
+    mapQuery: "Ellison Bluff State Natural Area Door County WI",
+    vibe: "short bluff payoff, north-end air, classic overlook",
+    crowdBias: "medium",
+    seasonBias: "shoulder",
+    notes: "excellent quick scenic stop on calmer days",
+    doorCountyTier: "middle",
+    trailLength: "0.5-1.5 mi",
+    coopDrive: "24 min",
+    postHikeDrive: "20 min"
+  },
+  {
+    name: "Ahnapee State Trail - Sturgeon Bay Segment",
+    nearTown: "Sturgeon Bay",
+    mapQuery: "Ahnapee State Trail Sturgeon Bay WI",
+    vibe: "rail-trail miles and low-drama movement",
+    crowdBias: "low",
+    seasonBias: "all",
+    notes: "good when you want simple mileage instead of destination energy",
+    doorCountyTier: "bside",
+    trailLength: "2.0-10.0 mi",
+    coopDrive: "37 min",
+    postHikeDrive: "32 min"
+  },
+  {
+    name: "Toft Point State Natural Area",
+    nearTown: "Baileys Harbor",
+    mapQuery: "Toft Point State Natural Area trail Baileys Harbor WI",
+    vibe: "cedar, shoreline, quieter natural-area feel",
+    crowdBias: "low",
+    seasonBias: "all",
+    notes: "one of the more tucked-away eastern shore walks",
+    doorCountyTier: "bside",
+    trailLength: "1.5-3.0 mi",
+    coopDrive: "22 min",
+    postHikeDrive: "16 min"
+  },
+  {
+    name: "Rock Island State Park",
+    nearTown: "Washington Island",
+    mapQuery: "Rock Island State Park trail Washington Island WI",
+    vibe: "commitment-heavy island day with strong reward",
+    crowdBias: "medium",
+    seasonBias: "all",
+    notes: "more of a destination day than an impulse spin",
+    doorCountyTier: "classic",
+    trailLength: "3.0-10.0 mi",
+    coopDrive: "75 min",
+    postHikeDrive: "72 min"
+  },
+  {
+    name: "Logan Creek Preserve",
+    nearTown: "near Jacksonport",
+    mapQuery: "Logan Creek Preserve trail Door County WI",
+    vibe: "bluff and wetland mix with quieter footing",
+    crowdBias: "low",
+    seasonBias: "all",
+    notes: "another nice B-side land-trust style answer",
+    doorCountyTier: "bside",
+    trailLength: "1.0-2.5 mi",
+    coopDrive: "24 min",
+    postHikeDrive: "18 min"
+  }
+);
+
+beaconTrails.push(
+  {
+    name: "Fishkill Ridge",
+    nearTown: "Beacon, NY",
+    mapQuery: "Fishkill Ridge trailhead Beacon NY",
+    vibe: "ridge climbing and bigger local payoff",
+    crowdBias: "medium",
+    distanceBias: "near",
+    notes: "strong local-feeling step up from the in-town defaults",
+    beaconTier: "bside",
+    trailLength: "3.0-7.0 mi",
+    coopDrive: "12 min",
+    postHikeDrive: "14 min"
+  },
+  {
+    name: "Dennings Point",
+    nearTown: "Beacon, NY",
+    mapQuery: "Dennings Point trail Beacon NY",
+    vibe: "river edge, easier grades, moody industrial nature",
+    crowdBias: "low",
+    distanceBias: "near",
+    notes: "excellent quieter option close to town",
+    beaconTier: "bside",
+    trailLength: "1.5-3.0 mi",
+    coopDrive: "7 min",
+    postHikeDrive: "6 min"
+  },
+  {
+    name: "Madam Brett Park",
+    nearTown: "Beacon, NY",
+    mapQuery: "Madam Brett Park Beacon NY",
+    vibe: "creekside, gentle, very everyday",
+    crowdBias: "low",
+    distanceBias: "near",
+    notes: "true local low-friction answer",
+    beaconTier: "bside",
+    trailLength: "1.0-2.5 mi",
+    coopDrive: "5 min",
+    postHikeDrive: "5 min"
+  },
+  {
+    name: "Little Stony Point",
+    nearTown: "Cold Spring, NY",
+    mapQuery: "Little Stony Point trail Cold Spring NY",
+    vibe: "short bluff reward with river views",
+    crowdBias: "medium",
+    distanceBias: "near",
+    notes: "small outing, high payoff, still popular",
+    beaconTier: "quick",
+    trailLength: "1.0-2.0 mi",
+    coopDrive: "17 min",
+    postHikeDrive: "21 min"
+  },
+  {
+    name: "Bull Hill (Mount Taurus)",
+    nearTown: "Cold Spring, NY",
+    mapQuery: "Bull Hill trailhead Cold Spring NY",
+    vibe: "classic Hudson Highlands climb with less hype than Breakneck",
+    crowdBias: "medium",
+    distanceBias: "near",
+    notes: "a strong medium-commitment classic",
+    beaconTier: "bside",
+    trailLength: "4.0-6.0 mi",
+    coopDrive: "18 min",
+    postHikeDrive: "22 min"
+  },
+  {
+    name: "Franny Reese State Park",
+    nearTown: "Highland, NY",
+    mapQuery: "Franny Reese State Park trail Highland NY",
+    vibe: "bridge views and moderate woodland loops",
+    crowdBias: "medium",
+    distanceBias: "medium",
+    notes: "works well when you want payoff without full alpine effort",
+    beaconTier: "bside",
+    trailLength: "2.0-5.0 mi",
+    coopDrive: "30 min",
+    postHikeDrive: "34 min"
+  },
+  {
+    name: "Beacon Greenway",
+    nearTown: "Beacon, NY",
+    mapQuery: "Beacon Greenway trail Beacon NY",
+    vibe: "flat local movement with town-to-river energy",
+    crowdBias: "low",
+    distanceBias: "near",
+    notes: "more walk than summit, but genuinely useful",
+    beaconTier: "bside",
+    trailLength: "1.5-4.0 mi",
+    coopDrive: "4 min",
+    postHikeDrive: "4 min"
+  },
+  {
+    name: "Long Dock Park and Riverfront",
+    nearTown: "Beacon, NY",
+    mapQuery: "Long Dock Park Beacon NY",
+    vibe: "river breeze and easy legs-out spin",
+    crowdBias: "low",
+    distanceBias: "near",
+    notes: "lightweight but excellent as a quick fresh-air answer",
+    beaconTier: "bside",
+    trailLength: "1.0-2.0 mi",
+    coopDrive: "6 min",
+    postHikeDrive: "5 min"
+  },
+  {
+    name: "South Beacon Mountain",
+    nearTown: "Beacon, NY",
+    mapQuery: "South Beacon Mountain trail Beacon NY",
+    vibe: "steep local mountain energy without leaving the orbit",
+    crowdBias: "medium",
+    distanceBias: "near",
+    notes: "useful when Mount Beacon feels too obvious",
+    beaconTier: "bside",
+    trailLength: "3.0-6.0 mi",
+    coopDrive: "12 min",
+    postHikeDrive: "14 min"
+  },
+  {
+    name: "Wilkinson Memorial Trail",
+    nearTown: "Beacon, NY",
+    mapQuery: "Wilkinson Memorial Trail Beacon NY",
+    vibe: "ridge connector with a more insider feel",
+    crowdBias: "low",
+    distanceBias: "medium",
+    notes: "good repeater-friendly option",
+    beaconTier: "bside",
+    trailLength: "3.0-6.0 mi",
+    coopDrive: "16 min",
+    postHikeDrive: "18 min"
+  },
+  {
+    name: "Hudson Highlands South Gate",
+    nearTown: "Cold Spring / Beacon side",
+    mapQuery: "Hudson Highlands State Park south gate trail NY",
+    vibe: "choose-your-own ridge day",
+    crowdBias: "medium",
+    distanceBias: "medium",
+    notes: "a flexible destination pool rather than one single icon",
+    beaconTier: "classic",
+    trailLength: "3.0-8.0 mi",
+    coopDrive: "20 min",
+    postHikeDrive: "23 min"
+  },
+  {
+    name: "Mount Beacon Fire Tower Route",
+    nearTown: "Beacon, NY",
+    mapQuery: "Mount Beacon fire tower trail Beacon NY",
+    vibe: "same mountain, more specific payoff",
+    crowdBias: "high",
+    distanceBias: "near",
+    notes: "a slightly more pointed version of the Mount Beacon pick",
+    beaconTier: "quick",
+    trailLength: "2.5-4.5 mi",
+    coopDrive: "8 min",
+    postHikeDrive: "6 min"
+  },
+  {
+    name: "Dockside to Dennings Point Ramble",
+    nearTown: "Beacon, NY",
+    mapQuery: "Dennings Point Long Dock Beacon NY walk",
+    vibe: "river-industrial-meadow mix, local and low-stakes",
+    crowdBias: "low",
+    distanceBias: "near",
+    notes: "great repeat-use local outing",
+    beaconTier: "bside",
+    trailLength: "2.0-4.0 mi",
+    coopDrive: "6 min",
+    postHikeDrive: "5 min"
+  },
+  {
+    name: "Fishkill Overlook / Short Ridge Option",
+    nearTown: "Beacon, NY",
+    mapQuery: "Fishkill Ridge overlook trail Beacon NY",
+    vibe: "shorter local ridge payoff",
+    crowdBias: "medium",
+    distanceBias: "near",
+    notes: "a middle-ground option between easy waterfront and full ridge day",
+    beaconTier: "bside",
+    trailLength: "2.0-4.0 mi",
+    coopDrive: "12 min",
+    postHikeDrive: "14 min"
+  },
+  {
+    name: "Hudson Highlands North Connector",
+    nearTown: "Beacon / Cold Spring side",
+    mapQuery: "Hudson Highlands connector trail Beacon NY",
+    vibe: "repeatable ridge-country wandering",
+    crowdBias: "medium",
+    distanceBias: "medium",
+    notes: "another way to keep the Beacon set from feeling repetitive",
+    beaconTier: "classic",
+    trailLength: "3.0-7.0 mi",
+    coopDrive: "18 min",
+    postHikeDrive: "20 min"
+  }
+);
+
+burkeTrails.push(
+  {
+    name: "South Run Stream Valley Trail",
+    nearTown: "Springfield / Burke",
+    mapQuery: "South Run Stream Valley Trail Springfield VA",
+    vibe: "quiet greenway miles and neighborhood woods",
+    crowdBias: "low",
+    distanceBias: "near",
+    wdcTier: "quick",
+    notes: "very usable everyday option",
+    trailLength: "2.0-5.0 mi",
+    coopDrive: "10 min",
+    postHikeDrive: "12 min"
+  },
+  {
+    name: "Hidden Pond Nature Center Trails",
+    nearTown: "Springfield, VA",
+    mapQuery: "Hidden Pond Nature Center trail Springfield VA",
+    vibe: "woodsy, easy, and family-friendly",
+    crowdBias: "low",
+    distanceBias: "near",
+    wdcTier: "quick",
+    notes: "short and reliable when time is tight",
+    trailLength: "1.0-2.0 mi",
+    coopDrive: "11 min",
+    postHikeDrive: "13 min"
+  },
+  {
+    name: "Royal Lake Park Trail",
+    nearTown: "Burke, VA",
+    mapQuery: "Royal Lake Park trail Burke VA",
+    vibe: "neighborhood lake loop with just enough woods",
+    crowdBias: "low",
+    distanceBias: "near",
+    wdcTier: "quick",
+    notes: "another genuinely local answer",
+    trailLength: "1.5-2.5 mi",
+    coopDrive: "9 min",
+    postHikeDrive: "10 min"
+  },
+  {
+    name: "Huntsman Lake Loop",
+    nearTown: "Springfield, VA",
+    mapQuery: "Huntsman Lake trail Springfield VA",
+    vibe: "easy water-side walk close to home",
+    crowdBias: "low",
+    distanceBias: "near",
+    wdcTier: "quick",
+    notes: "good low-friction suburban nature lap",
+    trailLength: "1.0-2.0 mi",
+    coopDrive: "10 min",
+    postHikeDrive: "12 min"
+  },
+  {
+    name: "Fairfax Cross County Trail - Burke Segment",
+    nearTown: "Burke, VA",
+    mapQuery: "Fairfax Cross County Trail Burke VA",
+    vibe: "connector miles and choose-your-own-distance logic",
+    crowdBias: "medium",
+    distanceBias: "medium",
+    wdcTier: "proper",
+    notes: "excellent backbone for a proper suburban adventure",
+    trailLength: "3.0-8.0 mi",
+    coopDrive: "8 min",
+    postHikeDrive: "9 min"
+  },
+  {
+    name: "Wakefield Park Trails",
+    nearTown: "Annandale / Springfield side",
+    mapQuery: "Wakefield Park trail Annandale VA",
+    vibe: "mixed woods and multi-use local mileage",
+    crowdBias: "medium",
+    distanceBias: "medium",
+    wdcTier: "proper",
+    notes: "good when Burke-area loops feel too small",
+    trailLength: "2.0-6.0 mi",
+    coopDrive: "20 min",
+    postHikeDrive: "22 min"
+  },
+  {
+    name: "Lake Accotink Trail",
+    nearTown: "Springfield, VA",
+    mapQuery: "Lake Accotink trail Springfield VA",
+    vibe: "popular lake loop with lots of repeat value",
+    crowdBias: "medium",
+    distanceBias: "medium",
+    wdcTier: "proper",
+    notes: "very dependable mid-length option",
+    trailLength: "3.5-4.5 mi",
+    coopDrive: "17 min",
+    postHikeDrive: "18 min"
+  },
+  {
+    name: "Long Branch Stream Valley",
+    nearTown: "Annandale, VA",
+    mapQuery: "Long Branch Stream Valley trail Annandale VA",
+    vibe: "creek corridor and quieter suburban woods",
+    crowdBias: "low",
+    distanceBias: "medium",
+    wdcTier: "proper",
+    notes: "a good lower-noise alternative to the obvious lake loops",
+    trailLength: "2.0-5.0 mi",
+    coopDrive: "18 min",
+    postHikeDrive: "20 min"
+  },
+  {
+    name: "Pohick Bay Regional Park",
+    nearTown: "Lorton, VA",
+    mapQuery: "Pohick Bay Regional Park trail Lorton VA",
+    vibe: "water views, broad paths, more room to roam",
+    crowdBias: "medium",
+    distanceBias: "medium",
+    wdcTier: "proper",
+    notes: "solid when you want something a bit bigger without going full all-day",
+    trailLength: "2.0-5.0 mi",
+    coopDrive: "28 min",
+    postHikeDrive: "30 min"
+  },
+  {
+    name: "Mason Neck State Park",
+    nearTown: "Lorton, VA",
+    mapQuery: "Mason Neck State Park trail Lorton VA",
+    vibe: "marsh, eagles, and a more destination-style coastal woods day",
+    crowdBias: "medium",
+    distanceBias: "far",
+    wdcTier: "allDay",
+    notes: "an all-day-feeling park without mountain logic",
+    trailLength: "3.0-7.0 mi",
+    coopDrive: "35 min",
+    postHikeDrive: "37 min"
+  },
+  {
+    name: "Great Falls River Trail Option",
+    nearTown: "McLean, VA",
+    mapQuery: "Great Falls Park River Trail VA",
+    vibe: "same destination zone, slightly more specific footing",
+    crowdBias: "high",
+    distanceBias: "far",
+    wdcTier: "allDay",
+    notes: "keeps Great Falls from being just one repeated answer",
+    trailLength: "2.5-5.0 mi",
+    coopDrive: "42 min",
+    postHikeDrive: "45 min"
+  },
+  {
+    name: "Occoquan Bay / Extended Park Day",
+    nearTown: "Lorton / Woodbridge side",
+    mapQuery: "Occoquan Bay trail Virginia",
+    vibe: "bigger regional nature reserve feel",
+    crowdBias: "medium",
+    distanceBias: "far",
+    wdcTier: "allDay",
+    notes: "fuller day if you want space more than steepness",
+    trailLength: "3.0-7.0 mi",
+    coopDrive: "32 min",
+    postHikeDrive: "34 min"
+  }
+);
+
 const taoTrailWisdom = [
   "Go lightly. The woods are already complete.",
   "The best path is the one you can enjoy today.",
@@ -845,7 +1309,51 @@ const taoTrailWisdom = [
   "The hill does not hurry, yet it arrives everywhere.",
   "Take only the pace that leaves room to notice birdsong.",
   "A good turning-around point is also wisdom.",
-  "The softer plan is often the better plan."
+  "The softer plan is often the better plan.",
+  "To know contentment is to be rich.",
+  "He who knows that enough is enough will always have enough.",
+  "The soft overcomes the hard.",
+  "Nature does not hurry, yet everything is done.",
+  "Be still like a mountain, and flow like a great river.",
+  "The journey of a thousand miles begins beneath the feet.",
+  "To yield is to be preserved whole.",
+  "He who stands on tiptoe is not steady.",
+  "He who rushes ahead does not go far.",
+  "Better to stop short than to fill to the brim.",
+  "He who knows others is wise; he who knows himself is enlightened.",
+  "Simplicity, patience, compassion. These three are treasures.",
+  "Look well into thyself; there is a source of strength there.",
+  "Very little is needed to make a happy life.",
+  "The happiness of your life depends upon the quality of your thoughts.",
+  "Dwell on the beauty of life.",
+  "Waste no more time arguing what a good man should be. Be one.",
+  "If it is not right, do not do it.",
+  "Let not the future disturb thee.",
+  "Confine thyself to the present.",
+  "Everything in any way beautiful is beautiful in itself.",
+  "The impediment to action advances action.",
+  "Receive without pride; let go without attachment.",
+  "When thou art offended, remember to turn inward first.",
+  "Nowhere can man find a quieter retreat than in his own soul.",
+  "A man must stand upright, not be kept upright by others.",
+  "Thou hast power over thy mind, not outward things.",
+  "What does not benefit the hive does not benefit the bee.",
+  "Life is short; the fruit of this life is a good character.",
+  "The soul becomes dyed with the color of its thoughts.",
+  "The thing itself was no trouble; thy opinion was trouble.",
+  "My trade and art is living.",
+  "There is no conversation more boring than the one about ourselves.",
+  "The greatest thing in the world is to know how to belong to oneself.",
+  "I want death to find me planting my cabbages.",
+  "A man may be humble through vainglory.",
+  "There is as much difference between us and ourselves as between us and others.",
+  "To begin deprives things of some of their difficulty.",
+  "Valor is steadiness, not bustle and noise.",
+  "We are all patchwork, and so shapeless and diverse in composition.",
+  "The most certain sign of wisdom is cheerfulness.",
+  "There is nothing so firmly believed as what we least know.",
+  "If the mind be troubled, the body suffers with it.",
+  "To study philosophy is nothing but to prepare one's self to die."
 ];
 
 const locations = {
@@ -869,6 +1377,11 @@ const locations = {
       label: "support your local trail alliance",
       url: "https://www.iceagetrail.org/donate/"
     },
+    resources: [
+      { label: "Ice Age Trail Alliance", url: "https://www.iceagetrail.org/" },
+      { label: "Wisconsin DNR", url: "https://dnr.wisconsin.gov/" },
+      { label: "Dane County Parks", url: "https://parks-lwrd.danecounty.gov/" }
+    ],
     metadata: {
       subtleLine: null
     },
@@ -897,6 +1410,11 @@ const locations = {
       label: "support your local trail alliance",
       url: "https://www.iceagetrail.org/donate/"
     },
+    resources: [
+      { label: "Ice Age Trail Alliance", url: "https://www.iceagetrail.org/" },
+      { label: "Wisconsin DNR", url: "https://dnr.wisconsin.gov/" },
+      { label: "Door County Land Trust", url: "https://doorcountylandtrust.org/" }
+    ],
     metadata: {
       subtleLine: null
     },
@@ -925,6 +1443,11 @@ const locations = {
       label: "support your local trail alliance",
       url: "https://www.patc.net/support"
     },
+    resources: [
+      { label: "Fairfax County Parks", url: "https://www.fairfaxcounty.gov/parks/" },
+      { label: "NOVA Parks", url: "https://www.novaparks.com/" },
+      { label: "NPS Great Falls", url: "https://www.nps.gov/grfa/index.htm" }
+    ],
     metadata: {
       subtleLine: "Suburban trail logic: flow matters more than summit."
     },
@@ -954,6 +1477,11 @@ const locations = {
       label: "support your local trail alliance",
       url: "https://hhlt.org/donate/"
     },
+    resources: [
+      { label: "Hudson Highlands Land Trust", url: "https://hhlt.org/" },
+      { label: "Hudson Highlands State Park", url: "https://parks.ny.gov/parks/hudsonhighlands" },
+      { label: "Scenic Hudson", url: "https://www.scenichudson.org/" }
+    ],
     metadata: {
       subtleLine: "Hudson Valley elevation: steady climb"
     },
@@ -982,6 +1510,11 @@ const locations = {
       label: "support your local trail alliance",
       url: "https://bouldercounty.gov/open-space/"
     },
+    resources: [
+      { label: "Boulder County Open Space", url: "https://bouldercounty.gov/open-space/" },
+      { label: "US Forest Service", url: "https://www.fs.usda.gov/arp" },
+      { label: "Indian Peaks", url: "https://www.recreation.gov/permits/4675318" }
+    ],
     metadata: {
       subtleLine: "Elevation: ~8,200 ft"
     },
@@ -1022,15 +1555,18 @@ const els = {
   mapsLink: document.querySelector("#maps-link"),
   postHikeLink: document.querySelector("#frosty-link"),
   actionsNote: document.querySelector("#actions-note"),
-  supportLink: document.querySelector("#support-link")
+  supportLink: document.querySelector("#support-link"),
+  resourceLinks: document.querySelector("#resource-links")
 };
 
 let currentLocationCode = "MAD";
 let currentBucketKey = DEFAULT_BUCKET;
 let currentTrail = null;
 let currentRequestId = 0;
-let wisdomCursor = 0;
+let quoteBag = [];
+let lastQuote = null;
 let refreshTimerId = null;
+let loadingTimerId = null;
 
 function monthIndexForTimeZone(timeZone) {
   const parts = new Intl.DateTimeFormat("en-US", {
@@ -1257,10 +1793,25 @@ function pickNederlandTrail(bucketKey) {
   return weighted[weighted.length - 1]?.trail ?? null;
 }
 
+function shuffleArray(items) {
+  const clone = [...items];
+  for (let index = clone.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [clone[index], clone[swapIndex]] = [clone[swapIndex], clone[index]];
+  }
+  return clone;
+}
+
 function nextWisdom() {
-  const index = wisdomCursor % taoTrailWisdom.length;
-  wisdomCursor += 1;
-  return taoTrailWisdom[index];
+  if (!quoteBag.length) {
+    quoteBag = shuffleArray(taoTrailWisdom);
+    if (quoteBag.length > 1 && quoteBag[quoteBag.length - 1] === lastQuote) {
+      [quoteBag[0], quoteBag[quoteBag.length - 1]] = [quoteBag[quoteBag.length - 1], quoteBag[0]];
+    }
+  }
+
+  lastQuote = quoteBag.pop();
+  return lastQuote;
 }
 
 function renderWisdom() {
@@ -1280,6 +1831,16 @@ function pulseResultCard() {
   refreshTimerId = window.setTimeout(() => {
     card.classList.remove("is-refreshing");
   }, 260);
+}
+
+function setLoadingState(isLoading) {
+  els.rerollButton.classList.toggle("is-loading", isLoading);
+  if (isLoading) {
+    els.rerollButton.textContent = "Spinning";
+    return;
+  }
+
+  els.rerollButton.textContent = "Spin Again";
 }
 
 function setLinkState(linkEl, href, enabled, label) {
@@ -1317,6 +1878,13 @@ function renderTabs() {
     button.addEventListener("click", () => switchLocation(location.code));
     els.tabRow.appendChild(button);
   });
+}
+
+function renderResourceLinks() {
+  const resources = getLocationConfig().resources || [];
+  els.resourceLinks.innerHTML = resources
+    .map((resource) => `<a href="${resource.url}" target="_blank" rel="noreferrer">${resource.label}</a>`)
+    .join(" · ");
 }
 
 function getButtonConfig(locationCode) {
@@ -1369,6 +1937,7 @@ function updateLocationCopy() {
   els.actionsNote.textContent = `Map links use your current location if you allow it, otherwise they start from ${location.origin.name}.`;
   els.supportLink.href = location.support.url;
   els.supportLink.textContent = location.support.label;
+  renderResourceLinks();
   els.quickButton.textContent = buttonConfig.quick;
   els.moreButton.textContent = buttonConfig.moreTime;
   els.allDayButton.hidden = !buttonConfig.allDay;
@@ -1384,6 +1953,8 @@ function updateLocationCopy() {
 
 function resetResultCard(message) {
   currentTrail = null;
+  window.clearTimeout(loadingTimerId);
+  setLoadingState(false);
   els.bucketLabel.textContent = "Choose a distance bucket";
   els.trailName.textContent = "A trailhead adventure awaits";
   els.trailAddress.textContent = message;
@@ -1482,6 +2053,8 @@ function renderTrail(trail, bucketKey) {
   els.postHikeDrive.textContent = `~${trail.postHikeDrive}`;
   els.seasonNote.textContent = getTrailFeel(trail, location);
   els.rerollButton.disabled = false;
+  window.clearTimeout(loadingTimerId);
+  loadingTimerId = window.setTimeout(() => setLoadingState(false), 220);
   updateActiveButtons();
   pulseResultCard();
   renderWisdom();
@@ -1494,10 +2067,12 @@ function renderTrail(trail, bucketKey) {
 
 function pickTrail(bucketKey) {
   currentBucketKey = bucketKey;
+  setLoadingState(true);
   const location = getLocationConfig();
   const bucket = location.buckets[bucketKey];
 
   if (!bucket.length) {
+    setLoadingState(false);
     resetResultCard(`${location.displayName} trails are still waiting on their list.`);
     return;
   }

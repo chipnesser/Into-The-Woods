@@ -376,6 +376,24 @@ h3 {
   background: linear-gradient(180deg, #dff8ab 0%, #bce26d 100%);
 }
 
+.reroll-btn.is-loading {
+  position: relative;
+  color: rgba(35, 65, 23, 0.78);
+}
+
+.reroll-btn.is-loading::after {
+  content: "";
+  display: inline-block;
+  width: 0.65rem;
+  height: 0.65rem;
+  margin-left: 0.55rem;
+  border-radius: 50%;
+  border: 2px solid rgba(35, 65, 23, 0.18);
+  border-top-color: rgba(35, 65, 23, 0.72);
+  animation: tiny-spin 560ms linear infinite;
+  vertical-align: middle;
+}
+
 .reroll-btn:disabled,
 .action-link.disabled {
   opacity: 0.55;
@@ -663,6 +681,18 @@ h3 {
   text-decoration-color: rgba(84, 118, 76, 0.3);
 }
 
+.resource-links {
+  margin: 0.45rem 0 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.resource-links a {
+  color: var(--ink-soft);
+  text-decoration-color: rgba(84, 118, 76, 0.24);
+}
+
 @keyframes drift {
   from {
     transform: translateX(0);
@@ -725,6 +755,15 @@ h3 {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes tiny-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
