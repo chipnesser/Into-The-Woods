@@ -6,6 +6,8 @@ Existing static, one-page trail picker hosted on GitHub Pages. No build step, pa
 
 - `index.html`: region buttons, trail details, weather fields and map actions.
 - `styles.css`: the existing layout, scenery and animations.
+- `assets/`: optimized painted scenery and a small paper-grain tile for the version 2.0 visual refresh.
+- `docs/visual-refresh-v2.md`: art direction, asset provenance/prompt, motion, performance and visual verification notes.
 - `script.js`: all trail arrays (including appended records), region configurations, weighted selection, display helpers, weather, sunset and Google Maps directions.
 - `trail-access.js`: researched parking/access destinations shared by Nederland trail records, sources, confidence, saved route snapshots and rounded drive-time ranges.
 - `research/nederland/DRIVE-ESTIMATES.md`: all 21 Nederland trails, evidence for the 12 chosen access points, both reference-point estimates and access caveats.
