@@ -833,6 +833,29 @@ h3 {
   }
 }
 
+.drive-details {
+  margin: 0 0 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.65);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.drive-details summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.drive-details p {
+  margin: 0.6rem 0;
+}
+
+.drive-details a {
+  color: inherit;
+  text-underline-offset: 0.15em;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
