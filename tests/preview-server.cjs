@@ -16,10 +16,13 @@ http.createServer((req, res) => {
     && Number.isInteger(requestedTrail) && requestedTrail >= 0 && requestedTrail < 21 ? requestedTrail : null;
   const files = { '/': ['index.html', 'text/html'], '/index.html': ['index.html', 'text/html'],
     '/script.js': ['script.js', 'text/javascript'], '/styles.css': ['styles.css', 'text/css'],
-    '/trail-access.js': ['trail-access.js', 'text/javascript'] };
+    '/trail-access.js': ['trail-access.js', 'text/javascript'],
+    '/assets/pastoral-landscape-v2.svg': ['assets/pastoral-landscape-v2.svg', 'image/svg+xml'],
+    '/assets/pastoral-landscape-v2-small.svg': ['assets/pastoral-landscape-v2-small.svg', 'image/svg+xml'],
+    '/assets/paper-grain.svg': ['assets/paper-grain.svg', 'image/svg+xml'] };
   if (!files[url.pathname]) { res.writeHead(404); return res.end(); }
   const [file, type] = files[url.pathname];
-  let content = fs.readFileSync(path.join(root, file), 'utf8');
+  let content = fs.readFileSync(path.join(root, file), type.startsWith('image/') ? undefined : 'utf8');
   if (file === 'index.html' && example) {
     content = content.replace('src="script.js"', `src="script.js?example=${example}${trailIndex === null ? '' : `&trail=${trailIndex}`}"`);
   }
