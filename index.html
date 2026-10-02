@@ -87,6 +87,15 @@
         </article>
       </div>
 
+      <details id="drive-details" class="drive-details" hidden>
+        <summary>Driving estimate details</summary>
+        <p id="drive-destination"></p>
+        <p id="drive-confidence"></p>
+        <p id="drive-note"></p>
+        <p id="drive-method"></p>
+        <ul id="drive-sources"></ul>
+      </details>
+
       <div class="weather-card">
         <div class="weather-head">
           <div>
@@ -141,7 +150,8 @@
       </p>
 
       <p class="footnote">
-        Drive times and some trailhead details are starter estimates; unrecorded estimates show as unavailable.
+        Drive times are approximate; Nederland ranges use researched parking/access points and road routes.
+        Allow extra time for parking, shuttles and entrance queues. Unrecorded estimates show as unavailable.
         Weather is fetched live from Open-Meteo. Named-place weather may use a park center;
         regional weather is labeled when a trail location cannot be confirmed.
         Place lookup: <a href="https://github.com/komoot/photon" target="_blank" rel="noreferrer">Photon</a>,
@@ -156,6 +166,7 @@
     </section>
   </main>
 
+  <script src="trail-access.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
