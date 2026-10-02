@@ -11,16 +11,21 @@ const examples = {
 http.createServer((req, res) => {
   const url = new URL(req.url, 'http://localhost');
   const example = examples[url.searchParams.get('example')] ? url.searchParams.get('example') : null;
+  const requestedTrail = Number(url.searchParams.get('trail'));
+  const trailIndex = example === 'NED' && url.searchParams.has('trail')
+    && Number.isInteger(requestedTrail) && requestedTrail >= 0 && requestedTrail < 21 ? requestedTrail : null;
   const files = { '/': ['index.html', 'text/html'], '/index.html': ['index.html', 'text/html'],
-    '/script.js': ['script.js', 'text/javascript'], '/styles.css': ['styles.css', 'text/css'] };
+    '/script.js': ['script.js', 'text/javascript'], '/styles.css': ['styles.css', 'text/css'],
+    '/trail-access.js': ['trail-access.js', 'text/javascript'] };
   if (!files[url.pathname]) { res.writeHead(404); return res.end(); }
   const [file, type] = files[url.pathname];
   let content = fs.readFileSync(path.join(root, file), 'utf8');
   if (file === 'index.html' && example) {
-    content = content.replace('src="script.js"', `src="script.js?example=${example}"`);
+    content = content.replace('src="script.js"', `src="script.js?example=${example}${trailIndex === null ? '' : `&trail=${trailIndex}`}"`);
   }
   if (file === 'script.js' && example) {
-    content += `\nswitchLocation("${example}"); renderTrail(${examples[example]}, "quick");\n`;
+    const selectedTrail = trailIndex === null ? examples[example] : `nederlandTrails[${trailIndex}]`;
+    content += `\nswitchLocation("${example}"); renderTrail(${selectedTrail}, "quick");\n`;
   }
   res.writeHead(200, { 'Content-Type': type, 'Cache-Control': 'no-store' });
   res.end(content);
