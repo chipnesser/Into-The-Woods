@@ -1,0 +1,5345 @@
+{
+  "researchedAt": "2026-10-02T14:29:49.712Z",
+  "provider": "OSRM / OpenStreetMap",
+  "profile": "driving",
+  "liveTraffic": false,
+  "referencePoints": {
+    "trainCars": {
+      "lat": 39.9604095,
+      "lon": -105.5100534
+    },
+    "kathmandu": {
+      "lat": 39.9620592,
+      "lon": -105.5115103
+    }
+  },
+  "points": {
+    "mud": {
+      "lat": 39.9791426,
+      "lon": -105.5079225
+    },
+    "caribou": {
+      "lat": 39.9822886,
+      "lon": -105.5190167
+    },
+    "barker": {
+      "lat": 39.96457752,
+      "lon": -105.50371075333334
+    },
+    "westMagnolia": {
+      "lat": 39.94677333,
+      "lon": -105.5177483
+    },
+    "gordon": {
+      "lat": 40.009793,
+      "lon": -105.50171
+    },
+    "sugarloaf": {
+      "lat": 40.0254,
+      "lon": -105.4252
+    },
+    "rainbow": {
+      "lat": 40.00949833,
+      "lon": -105.5690483
+    },
+    "hessie": {
+      "lat": 39.9516888,
+      "lon": -105.59502767142855
+    },
+    "fourth": {
+      "lat": 39.995,
+      "lon": -105.6342
+    },
+    "long": {
+      "lat": 40.0778,
+      "lon": -105.5844
+    },
+    "mitchell": {
+      "lat": 40.0831,
+      "lon": -105.5817
+    },
+    "niwot": {
+      "lat": 40.076534093333336,
+      "lon": -105.57734224000001
+    }
+  },
+  "routes": {
+    "mud/fromTrainCars": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5100534,39.9604095;-105.5079225,39.9791426?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9604095,
+          "lon": -105.5100534
+        },
+        {
+          "lat": 39.9791426,
+          "lon": -105.5079225
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 428.8,
+      "distanceMeters": 4246.3,
+      "waypoints": [
+        {
+          "distance": 22.73281145,
+          "name": "North Bridge Street",
+          "location": [
+            -105.510319,
+            39.960416
+          ]
+        },
+        {
+          "distance": 7.634568063,
+          "name": "",
+          "location": [
+            -105.507875,
+            39.979201
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 25.2,
+          "distanceMeters": 242.8,
+          "location": [
+            -105.510319,
+            39.960416
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 2.7,
+          "distanceMeters": 49.7,
+          "location": [
+            -105.510201,
+            39.96252
+          ],
+          "type": "roundabout"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 46.6,
+          "distanceMeters": 482.8,
+          "location": [
+            -105.510428,
+            39.962653
+          ],
+          "type": "exit roundabout"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 184.8,
+          "distanceMeters": 2609.5,
+          "location": [
+            -105.515818,
+            39.963306
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "",
+          "ref": "CR 126",
+          "mode": "driving",
+          "durationSeconds": 72.9,
+          "distanceMeters": 478.8,
+          "location": [
+            -105.504242,
+            39.981265
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 65.6,
+          "distanceMeters": 271.1,
+          "location": [
+            -105.509685,
+            39.980569
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 27.2,
+          "distanceMeters": 95.4,
+          "location": [
+            -105.507161,
+            39.979424
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 3.8,
+          "distanceMeters": 16.1,
+          "location": [
+            -105.508035,
+            39.979278
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.507875,
+            39.979201
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "mud/fromKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5115103,39.9620592;-105.5079225,39.9791426?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        },
+        {
+          "lat": 39.9791426,
+          "lon": -105.5079225
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 412.5,
+      "distanceMeters": 3938.1,
+      "waypoints": [
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        },
+        {
+          "distance": 7.634568063,
+          "name": "",
+          "location": [
+            -105.507875,
+            39.979201
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 10.4,
+          "distanceMeters": 58.4,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Jackson Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 16.6,
+          "distanceMeters": 78.3,
+          "location": [
+            -105.512198,
+            39.961895
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 31.2,
+          "distanceMeters": 330.4,
+          "location": [
+            -105.512196,
+            39.9626
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 184.8,
+          "distanceMeters": 2609.5,
+          "location": [
+            -105.515818,
+            39.963306
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "",
+          "ref": "CR 126",
+          "mode": "driving",
+          "durationSeconds": 72.9,
+          "distanceMeters": 478.8,
+          "location": [
+            -105.504242,
+            39.981265
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 65.6,
+          "distanceMeters": 271.1,
+          "location": [
+            -105.509685,
+            39.980569
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 27.2,
+          "distanceMeters": 95.4,
+          "location": [
+            -105.507161,
+            39.979424
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 3.8,
+          "distanceMeters": 16.1,
+          "location": [
+            -105.508035,
+            39.979278
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.507875,
+            39.979201
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "mud/toKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5079225,39.9791426;-105.5115103,39.9620592?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9791426,
+          "lon": -105.5079225
+        },
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 424.3,
+      "distanceMeters": 3983.2,
+      "waypoints": [
+        {
+          "distance": 7.634568063,
+          "name": "",
+          "location": [
+            -105.507875,
+            39.979201
+          ]
+        },
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 20.7,
+          "distanceMeters": 71.6,
+          "location": [
+            -105.507875,
+            39.979201
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 5.2,
+          "distanceMeters": 15.2,
+          "location": [
+            -105.507288,
+            39.978762
+          ],
+          "type": "end of road"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 84.6,
+          "distanceMeters": 340.9,
+          "location": [
+            -105.507119,
+            39.978799
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": "CR 126",
+          "mode": "driving",
+          "durationSeconds": 71.8,
+          "distanceMeters": 478.8,
+          "location": [
+            -105.509685,
+            39.980569
+          ],
+          "type": "end of road"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 190.2,
+          "distanceMeters": 2690.7,
+          "location": [
+            -105.504242,
+            39.981265
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 26.8,
+          "distanceMeters": 249.3,
+          "location": [
+            -105.515059,
+            39.96289
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Jackson Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 16.6,
+          "distanceMeters": 78.3,
+          "location": [
+            -105.512196,
+            39.9626
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 8.4,
+          "distanceMeters": 58.4,
+          "location": [
+            -105.512198,
+            39.961895
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "caribou/fromTrainCars": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5100534,39.9604095;-105.5190167,39.9822886?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9604095,
+          "lon": -105.5100534
+        },
+        {
+          "lat": 39.9822886,
+          "lon": -105.5190167
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 513.7,
+      "distanceMeters": 5008,
+      "waypoints": [
+        {
+          "distance": 22.73281145,
+          "name": "North Bridge Street",
+          "location": [
+            -105.510319,
+            39.960416
+          ]
+        },
+        {
+          "distance": 13.83628172,
+          "name": "",
+          "location": [
+            -105.519151,
+            39.982359
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 25.2,
+          "distanceMeters": 242.8,
+          "location": [
+            -105.510319,
+            39.960416
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 2.7,
+          "distanceMeters": 49.7,
+          "location": [
+            -105.510201,
+            39.96252
+          ],
+          "type": "roundabout"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 46.6,
+          "distanceMeters": 482.8,
+          "location": [
+            -105.510428,
+            39.962653
+          ],
+          "type": "exit roundabout"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 184.8,
+          "distanceMeters": 2609.5,
+          "location": [
+            -105.515818,
+            39.963306
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "",
+          "ref": "CR 126",
+          "mode": "driving",
+          "durationSeconds": 204.4,
+          "distanceMeters": 1414.6,
+          "location": [
+            -105.504242,
+            39.981265
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 10.8,
+          "distanceMeters": 44,
+          "location": [
+            -105.519626,
+            39.981682
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 39.2,
+          "distanceMeters": 164.4,
+          "location": [
+            -105.519346,
+            39.982015
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.519151,
+            39.982359
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "caribou/fromKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5115103,39.9620592;-105.5190167,39.9822886?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        },
+        {
+          "lat": 39.9822886,
+          "lon": -105.5190167
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 497.4,
+      "distanceMeters": 4699.8,
+      "waypoints": [
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        },
+        {
+          "distance": 13.83628172,
+          "name": "",
+          "location": [
+            -105.519151,
+            39.982359
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 10.4,
+          "distanceMeters": 58.4,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Jackson Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 16.6,
+          "distanceMeters": 78.3,
+          "location": [
+            -105.512198,
+            39.961895
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 31.2,
+          "distanceMeters": 330.4,
+          "location": [
+            -105.512196,
+            39.9626
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 184.8,
+          "distanceMeters": 2609.5,
+          "location": [
+            -105.515818,
+            39.963306
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "",
+          "ref": "CR 126",
+          "mode": "driving",
+          "durationSeconds": 204.4,
+          "distanceMeters": 1414.6,
+          "location": [
+            -105.504242,
+            39.981265
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 10.8,
+          "distanceMeters": 44,
+          "location": [
+            -105.519626,
+            39.981682
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 39.2,
+          "distanceMeters": 164.4,
+          "location": [
+            -105.519346,
+            39.982015
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.519151,
+            39.982359
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "caribou/toKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5190167,39.9822886;-105.5115103,39.9620592?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9822886,
+          "lon": -105.5190167
+        },
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 473.2,
+      "distanceMeters": 4578.8,
+      "waypoints": [
+        {
+          "distance": 13.83628172,
+          "name": "",
+          "location": [
+            -105.519151,
+            39.982359
+          ]
+        },
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 10.6,
+          "distanceMeters": 43.4,
+          "location": [
+            -105.519151,
+            39.982359
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 18,
+          "distanceMeters": 44,
+          "location": [
+            -105.519346,
+            39.982015
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": "CR 126",
+          "mode": "driving",
+          "durationSeconds": 202.6,
+          "distanceMeters": 1414.6,
+          "location": [
+            -105.519626,
+            39.981682
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 190.2,
+          "distanceMeters": 2690.7,
+          "location": [
+            -105.504242,
+            39.981265
+          ],
+          "type": "end of road"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 26.8,
+          "distanceMeters": 249.3,
+          "location": [
+            -105.515059,
+            39.96289
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Jackson Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 16.6,
+          "distanceMeters": 78.3,
+          "location": [
+            -105.512196,
+            39.9626
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 8.4,
+          "distanceMeters": 58.4,
+          "location": [
+            -105.512198,
+            39.961895
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "barker/fromTrainCars": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5100534,39.9604095;-105.50371075333334,39.96457752?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9604095,
+          "lon": -105.5100534
+        },
+        {
+          "lat": 39.96457752,
+          "lon": -105.50371075333334
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 125,
+      "distanceMeters": 910.1,
+      "waypoints": [
+        {
+          "distance": 22.73281145,
+          "name": "North Bridge Street",
+          "location": [
+            -105.510319,
+            39.960416
+          ]
+        },
+        {
+          "distance": 6.899650019,
+          "name": "",
+          "location": [
+            -105.503781,
+            39.964609
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 25.2,
+          "distanceMeters": 242.8,
+          "location": [
+            -105.510319,
+            39.960416
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Boulder Canyon Drive",
+          "ref": "CO 119",
+          "mode": "driving",
+          "durationSeconds": 1.9,
+          "distanceMeters": 18.5,
+          "location": [
+            -105.510201,
+            39.96252
+          ],
+          "type": "roundabout"
+        },
+        {
+          "name": "Boulder Canyon Drive",
+          "ref": "CO 119",
+          "mode": "driving",
+          "durationSeconds": 15.1,
+          "distanceMeters": 134.1,
+          "location": [
+            -105.510145,
+            39.962666
+          ],
+          "type": "exit roundabout"
+        },
+        {
+          "name": "East 3rd Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 47.7,
+          "distanceMeters": 321.6,
+          "location": [
+            -105.508793,
+            39.963257
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "East Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 18.1,
+          "distanceMeters": 123.7,
+          "location": [
+            -105.50503,
+            39.963231
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 17,
+          "distanceMeters": 69.4,
+          "location": [
+            -105.504277,
+            39.964183
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.503781,
+            39.964609
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "barker/fromKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5115103,39.9620592;-105.50371075333334,39.96457752?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        },
+        {
+          "lat": 39.96457752,
+          "lon": -105.50371075333334
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 123,
+      "distanceMeters": 837.7,
+      "waypoints": [
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        },
+        {
+          "distance": 6.899650019,
+          "name": "",
+          "location": [
+            -105.503781,
+            39.964609
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 16.8,
+          "distanceMeters": 95,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 6.4,
+          "distanceMeters": 75.4,
+          "location": [
+            -105.510402,
+            39.961874
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Boulder Canyon Drive",
+          "ref": "CO 119",
+          "mode": "driving",
+          "durationSeconds": 1.9,
+          "distanceMeters": 18.5,
+          "location": [
+            -105.510201,
+            39.96252
+          ],
+          "type": "roundabout"
+        },
+        {
+          "name": "Boulder Canyon Drive",
+          "ref": "CO 119",
+          "mode": "driving",
+          "durationSeconds": 15.1,
+          "distanceMeters": 134.1,
+          "location": [
+            -105.510145,
+            39.962666
+          ],
+          "type": "exit roundabout"
+        },
+        {
+          "name": "East 3rd Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 47.7,
+          "distanceMeters": 321.6,
+          "location": [
+            -105.508793,
+            39.963257
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "East Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 18.1,
+          "distanceMeters": 123.7,
+          "location": [
+            -105.50503,
+            39.963231
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 17,
+          "distanceMeters": 69.4,
+          "location": [
+            -105.504277,
+            39.964183
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.503781,
+            39.964609
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "barker/toKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.50371075333334,39.96457752;-105.5115103,39.9620592?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.96457752,
+          "lon": -105.50371075333334
+        },
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 123.4,
+      "distanceMeters": 856.4,
+      "waypoints": [
+        {
+          "distance": 6.899650019,
+          "name": "",
+          "location": [
+            -105.503781,
+            39.964609
+          ]
+        },
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 12.1,
+          "distanceMeters": 50.1,
+          "location": [
+            -105.503781,
+            39.964609
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 5.9,
+          "distanceMeters": 19.4,
+          "location": [
+            -105.50406,
+            39.964219
+          ],
+          "type": "fork"
+        },
+        {
+          "name": "East Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 18.1,
+          "distanceMeters": 123.7,
+          "location": [
+            -105.504277,
+            39.964183
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "East 3rd Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 46.5,
+          "distanceMeters": 321.6,
+          "location": [
+            -105.50503,
+            39.963231
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Boulder Canyon Drive",
+          "ref": "CO 119",
+          "mode": "driving",
+          "durationSeconds": 15.4,
+          "distanceMeters": 136.2,
+          "location": [
+            -105.508793,
+            39.963257
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 4.3,
+          "distanceMeters": 36.9,
+          "location": [
+            -105.510231,
+            39.962727
+          ],
+          "type": "roundabout"
+        },
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 7.3,
+          "distanceMeters": 73.5,
+          "location": [
+            -105.510374,
+            39.962525
+          ],
+          "type": "exit roundabout"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 13.8,
+          "distanceMeters": 95,
+          "location": [
+            -105.510402,
+            39.961874
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "westMagnolia/fromTrainCars": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5100534,39.9604095;-105.5177483,39.94677333?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9604095,
+          "lon": -105.5100534
+        },
+        {
+          "lat": 39.94677333,
+          "lon": -105.5177483
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 518.2,
+      "distanceMeters": 4646,
+      "waypoints": [
+        {
+          "distance": 22.73281145,
+          "name": "North Bridge Street",
+          "location": [
+            -105.510319,
+            39.960416
+          ]
+        },
+        {
+          "distance": 12.5671102,
+          "name": "",
+          "location": [
+            -105.517601,
+            39.946772
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 25,
+          "distanceMeters": 224.9,
+          "location": [
+            -105.510319,
+            39.960416
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 225.5,
+          "distanceMeters": 2655.1,
+          "location": [
+            -105.51121,
+            39.958597
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Haul Road",
+          "ref": "CR 132W",
+          "mode": "driving",
+          "durationSeconds": 244.9,
+          "distanceMeters": 1671.5,
+          "location": [
+            -105.504352,
+            39.95057
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": "FS 355A",
+          "mode": "driving",
+          "durationSeconds": 22.8,
+          "distanceMeters": 94.5,
+          "location": [
+            -105.51694,
+            39.947426
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": "FS 355A",
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.517601,
+            39.946772
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "westMagnolia/fromKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5115103,39.9620592;-105.5177483,39.94677333?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        },
+        {
+          "lat": 39.94677333,
+          "lon": -105.5177483
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 555.9,
+      "distanceMeters": 4908.4,
+      "waypoints": [
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        },
+        {
+          "distance": 12.5671102,
+          "name": "",
+          "location": [
+            -105.517601,
+            39.946772
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 18.9,
+          "distanceMeters": 95,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 43.8,
+          "distanceMeters": 392.3,
+          "location": [
+            -105.510402,
+            39.961874
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 225.5,
+          "distanceMeters": 2655.1,
+          "location": [
+            -105.51121,
+            39.958597
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Haul Road",
+          "ref": "CR 132W",
+          "mode": "driving",
+          "durationSeconds": 244.9,
+          "distanceMeters": 1671.5,
+          "location": [
+            -105.504352,
+            39.95057
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": "FS 355A",
+          "mode": "driving",
+          "durationSeconds": 22.8,
+          "distanceMeters": 94.5,
+          "location": [
+            -105.51694,
+            39.947426
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": "FS 355A",
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.517601,
+            39.946772
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "westMagnolia/toKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5177483,39.94677333;-105.5115103,39.9620592?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.94677333,
+          "lon": -105.5177483
+        },
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 559.9,
+      "distanceMeters": 4908.4,
+      "waypoints": [
+        {
+          "distance": 12.5671102,
+          "name": "",
+          "location": [
+            -105.517601,
+            39.946772
+          ]
+        },
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "",
+          "ref": "FS 355A",
+          "mode": "driving",
+          "durationSeconds": 24.1,
+          "distanceMeters": 94.5,
+          "location": [
+            -105.517601,
+            39.946772
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Haul Road",
+          "ref": "CR 132W",
+          "mode": "driving",
+          "durationSeconds": 240.6,
+          "distanceMeters": 1671.5,
+          "location": [
+            -105.51694,
+            39.947426
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 233.5,
+          "distanceMeters": 2682.4,
+          "location": [
+            -105.504352,
+            39.95057
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 47.9,
+          "distanceMeters": 365,
+          "location": [
+            -105.510972,
+            39.958761
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 13.8,
+          "distanceMeters": 95,
+          "location": [
+            -105.510402,
+            39.961874
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "gordon/fromTrainCars": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5100534,39.9604095;-105.50171,40.009793?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9604095,
+          "lon": -105.5100534
+        },
+        {
+          "lat": 40.009793,
+          "lon": -105.50171
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 602.2,
+      "distanceMeters": 8452,
+      "waypoints": [
+        {
+          "distance": 22.73281145,
+          "name": "North Bridge Street",
+          "location": [
+            -105.510319,
+            39.960416
+          ]
+        },
+        {
+          "distance": 23.07280267,
+          "name": "Garnet Spur",
+          "location": [
+            -105.501978,
+            40.00982
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 25.2,
+          "distanceMeters": 242.8,
+          "location": [
+            -105.510319,
+            39.960416
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 2.7,
+          "distanceMeters": 49.7,
+          "location": [
+            -105.510201,
+            39.96252
+          ],
+          "type": "roundabout"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 46.6,
+          "distanceMeters": 482.8,
+          "location": [
+            -105.510428,
+            39.962653
+          ],
+          "type": "exit roundabout"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 486.3,
+          "distanceMeters": 7561.5,
+          "location": [
+            -105.515818,
+            39.963306
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Garnet Spur",
+          "ref": "FS 226.1",
+          "mode": "driving",
+          "durationSeconds": 41.4,
+          "distanceMeters": 115.2,
+          "location": [
+            -105.502659,
+            40.008934
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Garnet Spur",
+          "ref": "FS 226.1",
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.501978,
+            40.00982
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "gordon/fromKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5115103,39.9620592;-105.50171,40.009793?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        },
+        {
+          "lat": 40.009793,
+          "lon": -105.50171
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 585.9,
+      "distanceMeters": 8143.8,
+      "waypoints": [
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        },
+        {
+          "distance": 23.07280267,
+          "name": "Garnet Spur",
+          "location": [
+            -105.501978,
+            40.00982
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 10.4,
+          "distanceMeters": 58.4,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Jackson Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 16.6,
+          "distanceMeters": 78.3,
+          "location": [
+            -105.512198,
+            39.961895
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 31.2,
+          "distanceMeters": 330.4,
+          "location": [
+            -105.512196,
+            39.9626
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 486.3,
+          "distanceMeters": 7561.5,
+          "location": [
+            -105.515818,
+            39.963306
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Garnet Spur",
+          "ref": "FS 226.1",
+          "mode": "driving",
+          "durationSeconds": 41.4,
+          "distanceMeters": 115.2,
+          "location": [
+            -105.502659,
+            40.008934
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Garnet Spur",
+          "ref": "FS 226.1",
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.501978,
+            40.00982
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "gordon/toKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.50171,40.009793;-105.5115103,39.9620592?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 40.009793,
+          "lon": -105.50171
+        },
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 592.8,
+      "distanceMeters": 8143.8,
+      "waypoints": [
+        {
+          "distance": 23.07280267,
+          "name": "Garnet Spur",
+          "location": [
+            -105.501978,
+            40.00982
+          ]
+        },
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "Garnet Spur",
+          "ref": "FS 226.1",
+          "mode": "driving",
+          "durationSeconds": 42.5,
+          "distanceMeters": 115.2,
+          "location": [
+            -105.501978,
+            40.00982
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 498.5,
+          "distanceMeters": 7642.6,
+          "location": [
+            -105.502659,
+            40.008934
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 26.8,
+          "distanceMeters": 249.3,
+          "location": [
+            -105.515059,
+            39.96289
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Jackson Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 16.6,
+          "distanceMeters": 78.3,
+          "location": [
+            -105.512196,
+            39.9626
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 8.4,
+          "distanceMeters": 58.4,
+          "location": [
+            -105.512198,
+            39.961895
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "sugarloaf/fromTrainCars": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5100534,39.9604095;-105.41467,40.02016;-105.4252,40.0254?overview=false&steps=true&generate_hints=false&radiuses=150;150;150",
+      "requested": [
+        {
+          "lat": 39.9604095,
+          "lon": -105.5100534
+        },
+        {
+          "lat": 40.02016,
+          "lon": -105.41467
+        },
+        {
+          "lat": 40.0254,
+          "lon": -105.4252
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 2049.4,
+      "distanceMeters": 26614.9,
+      "waypoints": [
+        {
+          "distance": 22.73281145,
+          "name": "North Bridge Street",
+          "location": [
+            -105.510319,
+            39.960416
+          ]
+        },
+        {
+          "distance": 1.889526113,
+          "name": "Sugarloaf Road",
+          "location": [
+            -105.414671,
+            40.020143
+          ]
+        },
+        {
+          "distance": 3.877718775,
+          "name": "Switzerland Trail",
+          "location": [
+            -105.425233,
+            40.025376
+          ]
+        }
+      ],
+      "routingNote": "Via Sugarloaf Road / Sugarloaf Mountain Road junction; avoid Switzerland Trail shortcut.",
+      "supersededRoute": {
+        "url": "https://router.project-osrm.org/route/v1/driving/-105.5100534,39.9604095;-105.4252,40.0254?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+        "durationSeconds": 1893.9,
+        "roads": [
+          "North Bridge Street",
+          "West 2nd Street",
+          "Peak-to-Peak Highway",
+          null,
+          "Switzerland Trail"
+        ]
+      },
+      "steps": [
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 25.2,
+          "distanceMeters": 242.8,
+          "location": [
+            -105.510319,
+            39.960416
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Boulder Canyon Drive",
+          "ref": "CO 119",
+          "mode": "driving",
+          "durationSeconds": 1.9,
+          "distanceMeters": 18.5,
+          "location": [
+            -105.510201,
+            39.96252
+          ],
+          "type": "roundabout"
+        },
+        {
+          "name": "Boulder Canyon Drive",
+          "ref": "CO 119",
+          "mode": "driving",
+          "durationSeconds": 1152.2,
+          "distanceMeters": 17465.2,
+          "location": [
+            -105.510145,
+            39.962666
+          ],
+          "type": "exit roundabout"
+        },
+        {
+          "name": "Sugarloaf Road",
+          "ref": "CR 122",
+          "mode": "driving",
+          "durationSeconds": 684,
+          "distanceMeters": 7603.5,
+          "location": [
+            -105.353987,
+            40.004169
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Sugarloaf Road",
+          "ref": "CR 122",
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.414671,
+            40.020143
+          ],
+          "type": "arrive"
+        },
+        {
+          "name": "Sugarloaf Road",
+          "ref": "CR 122",
+          "mode": "driving",
+          "durationSeconds": 1.5,
+          "distanceMeters": 6.4,
+          "location": [
+            -105.414671,
+            40.020143
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Sugarloaf Mountain Road",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 184.6,
+          "distanceMeters": 1278.4,
+          "location": [
+            -105.414746,
+            40.020144
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Switzerland Trail",
+          "ref": "CR 120",
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.425233,
+            40.025376
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "sugarloaf/fromKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5115103,39.9620592;-105.41467,40.02016;-105.4252,40.0254?overview=false&steps=true&generate_hints=false&radiuses=150;150;150",
+      "requested": [
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        },
+        {
+          "lat": 40.02016,
+          "lon": -105.41467
+        },
+        {
+          "lat": 40.0254,
+          "lon": -105.4252
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 2047.4,
+      "distanceMeters": 26542.5,
+      "waypoints": [
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        },
+        {
+          "distance": 1.889526113,
+          "name": "Sugarloaf Road",
+          "location": [
+            -105.414671,
+            40.020143
+          ]
+        },
+        {
+          "distance": 3.877718775,
+          "name": "Switzerland Trail",
+          "location": [
+            -105.425233,
+            40.025376
+          ]
+        }
+      ],
+      "routingNote": "Via Sugarloaf Road / Sugarloaf Mountain Road junction; avoid Switzerland Trail shortcut.",
+      "supersededRoute": {
+        "url": "https://router.project-osrm.org/route/v1/driving/-105.5115103,39.9620592;-105.4252,40.0254?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+        "durationSeconds": 1877.6,
+        "roads": [
+          "West 1st Street",
+          "Jackson Street",
+          "West 2nd Street",
+          "Peak-to-Peak Highway",
+          null,
+          "Switzerland Trail"
+        ]
+      },
+      "steps": [
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 16.8,
+          "distanceMeters": 95,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 6.4,
+          "distanceMeters": 75.4,
+          "location": [
+            -105.510402,
+            39.961874
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Boulder Canyon Drive",
+          "ref": "CO 119",
+          "mode": "driving",
+          "durationSeconds": 1.9,
+          "distanceMeters": 18.5,
+          "location": [
+            -105.510201,
+            39.96252
+          ],
+          "type": "roundabout"
+        },
+        {
+          "name": "Boulder Canyon Drive",
+          "ref": "CO 119",
+          "mode": "driving",
+          "durationSeconds": 1152.2,
+          "distanceMeters": 17465.2,
+          "location": [
+            -105.510145,
+            39.962666
+          ],
+          "type": "exit roundabout"
+        },
+        {
+          "name": "Sugarloaf Road",
+          "ref": "CR 122",
+          "mode": "driving",
+          "durationSeconds": 684,
+          "distanceMeters": 7603.5,
+          "location": [
+            -105.353987,
+            40.004169
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Sugarloaf Road",
+          "ref": "CR 122",
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.414671,
+            40.020143
+          ],
+          "type": "arrive"
+        },
+        {
+          "name": "Sugarloaf Road",
+          "ref": "CR 122",
+          "mode": "driving",
+          "durationSeconds": 1.5,
+          "distanceMeters": 6.4,
+          "location": [
+            -105.414671,
+            40.020143
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Sugarloaf Mountain Road",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 184.6,
+          "distanceMeters": 1278.4,
+          "location": [
+            -105.414746,
+            40.020144
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Switzerland Trail",
+          "ref": "CR 120",
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.425233,
+            40.025376
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "sugarloaf/toKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.4252,40.0254;-105.41467,40.02016;-105.5115103,39.9620592?overview=false&steps=true&generate_hints=false&radiuses=150;150;150",
+      "requested": [
+        {
+          "lat": 40.0254,
+          "lon": -105.4252
+        },
+        {
+          "lat": 40.02016,
+          "lon": -105.41467
+        },
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 2047.5,
+      "distanceMeters": 26561.2,
+      "waypoints": [
+        {
+          "distance": 3.877718775,
+          "name": "Switzerland Trail",
+          "location": [
+            -105.425233,
+            40.025376
+          ]
+        },
+        {
+          "distance": 1.889526113,
+          "name": "Sugarloaf Road",
+          "location": [
+            -105.414671,
+            40.020143
+          ]
+        },
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        }
+      ],
+      "routingNote": "Via Sugarloaf Road / Sugarloaf Mountain Road junction; avoid Switzerland Trail shortcut.",
+      "supersededRoute": {
+        "url": "https://router.project-osrm.org/route/v1/driving/-105.4252,40.0254;-105.5115103,39.9620592?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+        "durationSeconds": 1886.7,
+        "roads": [
+          "Switzerland Trail",
+          "Peak-to-Peak Highway",
+          "West 2nd Street",
+          "Jackson Street",
+          "West 1st Street"
+        ]
+      },
+      "steps": [
+        {
+          "name": "Switzerland Trail",
+          "ref": "CR 120",
+          "mode": "driving",
+          "durationSeconds": 7.8,
+          "distanceMeters": 50.8,
+          "location": [
+            -105.425233,
+            40.025376
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Sugarloaf Mountain Road",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 180.7,
+          "distanceMeters": 1227.6,
+          "location": [
+            -105.424889,
+            40.025007
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Sugarloaf Road",
+          "ref": "CR 122",
+          "mode": "driving",
+          "durationSeconds": 0.5,
+          "distanceMeters": 6.4,
+          "location": [
+            -105.414746,
+            40.020144
+          ],
+          "type": "end of road"
+        },
+        {
+          "name": "Sugarloaf Road",
+          "ref": "CR 122",
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.414671,
+            40.020143
+          ],
+          "type": "arrive"
+        },
+        {
+          "name": "Sugarloaf Road",
+          "ref": "CR 122",
+          "mode": "driving",
+          "durationSeconds": 686.2,
+          "distanceMeters": 7603.5,
+          "location": [
+            -105.414671,
+            40.020143
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Boulder Canyon Drive",
+          "ref": "CO 119",
+          "mode": "driving",
+          "durationSeconds": 1146.9,
+          "distanceMeters": 17467.4,
+          "location": [
+            -105.353987,
+            40.004169
+          ],
+          "type": "end of road"
+        },
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 4.3,
+          "distanceMeters": 36.9,
+          "location": [
+            -105.510231,
+            39.962727
+          ],
+          "type": "roundabout"
+        },
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 7.3,
+          "distanceMeters": 73.5,
+          "location": [
+            -105.510374,
+            39.962525
+          ],
+          "type": "exit roundabout"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 13.8,
+          "distanceMeters": 95,
+          "location": [
+            -105.510402,
+            39.961874
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "rainbow/fromTrainCars": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5100534,39.9604095;-105.5246755,40.0273588;-105.5690483,40.00949833?overview=false&steps=true&generate_hints=false&radiuses=150;150;150",
+      "requested": [
+        {
+          "lat": 39.9604095,
+          "lon": -105.5100534
+        },
+        {
+          "lat": 40.0273588,
+          "lon": -105.5246755
+        },
+        {
+          "lat": 40.00949833,
+          "lon": -105.5690483
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 5823.9,
+      "distanceMeters": 34694.8,
+      "waypoints": [
+        {
+          "distance": 22.73281145,
+          "name": "North Bridge Street",
+          "location": [
+            -105.510319,
+            39.960416
+          ]
+        },
+        {
+          "distance": 1.553738306,
+          "name": "",
+          "location": [
+            -105.524659,
+            40.027364
+          ]
+        },
+        {
+          "distance": 1.116493956,
+          "name": "Rainbow Lakes Road",
+          "location": [
+            -105.56906,
+            40.009494
+          ]
+        }
+      ],
+      "routingNote": "Via South Sourdough / NFSR 298; follow official Rainbow Lakes approach instead of Caribou / FR 505 shortcut.",
+      "supersededRoute": {
+        "url": "https://router.project-osrm.org/route/v1/driving/-105.5100534,39.9604095;-105.5690483,40.00949833?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+        "durationSeconds": 3545.2,
+        "roads": [
+          "North Bridge Street",
+          "West 2nd Street",
+          "Peak-to-Peak Highway",
+          "Indian Peaks Drive",
+          "Caribou Road",
+          "CR 116J; FR 505.1",
+          "Rainbow Lakes Road"
+        ]
+      },
+      "steps": [
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 25.2,
+          "distanceMeters": 242.8,
+          "location": [
+            -105.510319,
+            39.960416
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 2.7,
+          "distanceMeters": 49.7,
+          "location": [
+            -105.510201,
+            39.96252
+          ],
+          "type": "roundabout"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 46.6,
+          "distanceMeters": 482.8,
+          "location": [
+            -105.510428,
+            39.962653
+          ],
+          "type": "exit roundabout"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 677.6,
+          "distanceMeters": 10831.4,
+          "location": [
+            -105.515818,
+            39.963306
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Rainbow Lakes Road",
+          "ref": "CR 116",
+          "mode": "driving",
+          "durationSeconds": 555.4,
+          "distanceMeters": 763.5,
+          "location": [
+            -105.521351,
+            40.032423
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 6.3,
+          "distanceMeters": 20.5,
+          "location": [
+            -105.524908,
+            40.027892
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 35.4,
+          "distanceMeters": 130.3,
+          "location": [
+            -105.524826,
+            40.027718
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 11.9,
+          "distanceMeters": 49.9,
+          "location": [
+            -105.52446,
+            40.026941
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.524659,
+            40.027364
+          ],
+          "type": "arrive"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 17.2,
+          "distanceMeters": 62.4,
+          "location": [
+            -105.524659,
+            40.027364
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Rainbow Lakes Road",
+          "ref": "CR 116",
+          "mode": "driving",
+          "durationSeconds": 550.4,
+          "distanceMeters": 763.5,
+          "location": [
+            -105.524908,
+            40.027892
+          ],
+          "type": "end of road"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 497.9,
+          "distanceMeters": 8221.8,
+          "location": [
+            -105.521351,
+            40.032423
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": "CR 126",
+          "mode": "driving",
+          "durationSeconds": 320.1,
+          "distanceMeters": 2288.9,
+          "location": [
+            -105.504242,
+            39.981265
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "County Road 126 North",
+          "ref": "CR 126N",
+          "mode": "driving",
+          "durationSeconds": 345.6,
+          "distanceMeters": 2395.8,
+          "location": [
+            -105.528712,
+            39.978974
+          ],
+          "type": "fork"
+        },
+        {
+          "name": "Caribou Road",
+          "ref": "CR 128",
+          "mode": "driving",
+          "durationSeconds": 431.2,
+          "distanceMeters": 2994.7,
+          "location": [
+            -105.554784,
+            39.976964
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": "CR 116J; FR 505.1",
+          "mode": "driving",
+          "durationSeconds": 645,
+          "distanceMeters": 1791.1,
+          "location": [
+            -105.57866,
+            39.981056
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": "CR 116J; FR 505.1",
+          "mode": "driving",
+          "durationSeconds": 662,
+          "distanceMeters": 1829.9,
+          "location": [
+            -105.570681,
+            39.994413
+          ],
+          "type": "fork"
+        },
+        {
+          "name": "",
+          "ref": "CR 116J; FR 505.1",
+          "mode": "driving",
+          "durationSeconds": 299.8,
+          "distanceMeters": 812.6,
+          "location": [
+            -105.557523,
+            40.001444
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Rainbow Lakes Road",
+          "ref": "CR 116",
+          "mode": "driving",
+          "durationSeconds": 693.6,
+          "distanceMeters": 963.1,
+          "location": [
+            -105.561611,
+            40.006045
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Rainbow Lakes Road",
+          "ref": "CR 116",
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.56906,
+            40.009494
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "rainbow/fromKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5115103,39.9620592;-105.5246755,40.0273588;-105.5690483,40.00949833?overview=false&steps=true&generate_hints=false&radiuses=150;150;150",
+      "requested": [
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        },
+        {
+          "lat": 40.0273588,
+          "lon": -105.5246755
+        },
+        {
+          "lat": 40.00949833,
+          "lon": -105.5690483
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 5807.6,
+      "distanceMeters": 34386.6,
+      "waypoints": [
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        },
+        {
+          "distance": 1.553738306,
+          "name": "",
+          "location": [
+            -105.524659,
+            40.027364
+          ]
+        },
+        {
+          "distance": 1.116493956,
+          "name": "Rainbow Lakes Road",
+          "location": [
+            -105.56906,
+            40.009494
+          ]
+        }
+      ],
+      "routingNote": "Via South Sourdough / NFSR 298; follow official Rainbow Lakes approach instead of Caribou / FR 505 shortcut.",
+      "supersededRoute": {
+        "url": "https://router.project-osrm.org/route/v1/driving/-105.5115103,39.9620592;-105.5690483,40.00949833?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+        "durationSeconds": 3528.9,
+        "roads": [
+          "West 1st Street",
+          "Jackson Street",
+          "West 2nd Street",
+          "Peak-to-Peak Highway",
+          "Indian Peaks Drive",
+          "Caribou Road",
+          "CR 116J; FR 505.1",
+          "Rainbow Lakes Road"
+        ]
+      },
+      "steps": [
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 10.4,
+          "distanceMeters": 58.4,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Jackson Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 16.6,
+          "distanceMeters": 78.3,
+          "location": [
+            -105.512198,
+            39.961895
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 31.2,
+          "distanceMeters": 330.4,
+          "location": [
+            -105.512196,
+            39.9626
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 677.6,
+          "distanceMeters": 10831.4,
+          "location": [
+            -105.515818,
+            39.963306
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Rainbow Lakes Road",
+          "ref": "CR 116",
+          "mode": "driving",
+          "durationSeconds": 555.4,
+          "distanceMeters": 763.5,
+          "location": [
+            -105.521351,
+            40.032423
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 6.3,
+          "distanceMeters": 20.5,
+          "location": [
+            -105.524908,
+            40.027892
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 35.4,
+          "distanceMeters": 130.3,
+          "location": [
+            -105.524826,
+            40.027718
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 11.9,
+          "distanceMeters": 49.9,
+          "location": [
+            -105.52446,
+            40.026941
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.524659,
+            40.027364
+          ],
+          "type": "arrive"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 17.2,
+          "distanceMeters": 62.4,
+          "location": [
+            -105.524659,
+            40.027364
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Rainbow Lakes Road",
+          "ref": "CR 116",
+          "mode": "driving",
+          "durationSeconds": 550.4,
+          "distanceMeters": 763.5,
+          "location": [
+            -105.524908,
+            40.027892
+          ],
+          "type": "end of road"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 497.9,
+          "distanceMeters": 8221.8,
+          "location": [
+            -105.521351,
+            40.032423
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": "CR 126",
+          "mode": "driving",
+          "durationSeconds": 320.1,
+          "distanceMeters": 2288.9,
+          "location": [
+            -105.504242,
+            39.981265
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "County Road 126 North",
+          "ref": "CR 126N",
+          "mode": "driving",
+          "durationSeconds": 345.6,
+          "distanceMeters": 2395.8,
+          "location": [
+            -105.528712,
+            39.978974
+          ],
+          "type": "fork"
+        },
+        {
+          "name": "Caribou Road",
+          "ref": "CR 128",
+          "mode": "driving",
+          "durationSeconds": 431.2,
+          "distanceMeters": 2994.7,
+          "location": [
+            -105.554784,
+            39.976964
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": "CR 116J; FR 505.1",
+          "mode": "driving",
+          "durationSeconds": 645,
+          "distanceMeters": 1791.1,
+          "location": [
+            -105.57866,
+            39.981056
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": "CR 116J; FR 505.1",
+          "mode": "driving",
+          "durationSeconds": 662,
+          "distanceMeters": 1829.9,
+          "location": [
+            -105.570681,
+            39.994413
+          ],
+          "type": "fork"
+        },
+        {
+          "name": "",
+          "ref": "CR 116J; FR 505.1",
+          "mode": "driving",
+          "durationSeconds": 299.8,
+          "distanceMeters": 812.6,
+          "location": [
+            -105.557523,
+            40.001444
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Rainbow Lakes Road",
+          "ref": "CR 116",
+          "mode": "driving",
+          "durationSeconds": 693.6,
+          "distanceMeters": 963.1,
+          "location": [
+            -105.561611,
+            40.006045
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Rainbow Lakes Road",
+          "ref": "CR 116",
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.56906,
+            40.009494
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "rainbow/toKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5690483,40.00949833;-105.5246755,40.0273588;-105.5115103,39.9620592?overview=false&steps=true&generate_hints=false&radiuses=150;150;150",
+      "requested": [
+        {
+          "lat": 40.00949833,
+          "lon": -105.5690483
+        },
+        {
+          "lat": 40.0273588,
+          "lon": -105.5246755
+        },
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 5817.3,
+      "distanceMeters": 34386.7,
+      "waypoints": [
+        {
+          "distance": 1.116493956,
+          "name": "Rainbow Lakes Road",
+          "location": [
+            -105.56906,
+            40.009494
+          ]
+        },
+        {
+          "distance": 1.553738306,
+          "name": "",
+          "location": [
+            -105.524659,
+            40.027364
+          ]
+        },
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        }
+      ],
+      "routingNote": "Via South Sourdough / NFSR 298; follow official Rainbow Lakes approach instead of Caribou / FR 505 shortcut.",
+      "supersededRoute": {
+        "url": "https://router.project-osrm.org/route/v1/driving/-105.5690483,40.00949833;-105.5115103,39.9620592?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+        "durationSeconds": 3536.9,
+        "roads": [
+          "Rainbow Lakes Road",
+          "CR 116J; FR 505.1",
+          "Caribou Road",
+          "Indian Peaks Drive",
+          "Peak-to-Peak Highway",
+          "West 2nd Street",
+          "Jackson Street",
+          "West 1st Street"
+        ]
+      },
+      "steps": [
+        {
+          "name": "Rainbow Lakes Road",
+          "ref": "CR 116",
+          "mode": "driving",
+          "durationSeconds": 700.2,
+          "distanceMeters": 963.1,
+          "location": [
+            -105.56906,
+            40.009494
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "",
+          "ref": "CR 116J; FR 505.1",
+          "mode": "driving",
+          "durationSeconds": 114.4,
+          "distanceMeters": 317.8,
+          "location": [
+            -105.561611,
+            40.006045
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": "CR 116J; FR 505.1",
+          "mode": "driving",
+          "durationSeconds": 184.1,
+          "distanceMeters": 494.8,
+          "location": [
+            -105.561215,
+            40.003866
+          ],
+          "type": "fork"
+        },
+        {
+          "name": "",
+          "ref": "CR 116J; FR 505.1",
+          "mode": "driving",
+          "durationSeconds": 1304.3,
+          "distanceMeters": 3621,
+          "location": [
+            -105.557523,
+            40.001444
+          ],
+          "type": "continue"
+        },
+        {
+          "name": "Caribou Road",
+          "ref": "CR 128",
+          "mode": "driving",
+          "durationSeconds": 431.7,
+          "distanceMeters": 2994.7,
+          "location": [
+            -105.57866,
+            39.981056
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "County Road 126 North",
+          "ref": "CR 126N",
+          "mode": "driving",
+          "durationSeconds": 666.6,
+          "distanceMeters": 4684.7,
+          "location": [
+            -105.554784,
+            39.976964
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 499.8,
+          "distanceMeters": 8221.8,
+          "location": [
+            -105.504242,
+            39.981265
+          ],
+          "type": "end of road"
+        },
+        {
+          "name": "Rainbow Lakes Road",
+          "ref": "CR 116",
+          "mode": "driving",
+          "durationSeconds": 555.4,
+          "distanceMeters": 763.5,
+          "location": [
+            -105.521351,
+            40.032423
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 6.3,
+          "distanceMeters": 20.5,
+          "location": [
+            -105.524908,
+            40.027892
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 35.4,
+          "distanceMeters": 130.3,
+          "location": [
+            -105.524826,
+            40.027718
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 11.9,
+          "distanceMeters": 49.9,
+          "location": [
+            -105.52446,
+            40.026941
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.524659,
+            40.027364
+          ],
+          "type": "arrive"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 17.2,
+          "distanceMeters": 62.4,
+          "location": [
+            -105.524659,
+            40.027364
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Rainbow Lakes Road",
+          "ref": "CR 116",
+          "mode": "driving",
+          "durationSeconds": 550.4,
+          "distanceMeters": 763.5,
+          "location": [
+            -105.524908,
+            40.027892
+          ],
+          "type": "end of road"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 687.8,
+          "distanceMeters": 10912.5,
+          "location": [
+            -105.521351,
+            40.032423
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 26.8,
+          "distanceMeters": 249.3,
+          "location": [
+            -105.515059,
+            39.96289
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Jackson Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 16.6,
+          "distanceMeters": 78.3,
+          "location": [
+            -105.512196,
+            39.9626
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 8.4,
+          "distanceMeters": 58.4,
+          "location": [
+            -105.512198,
+            39.961895
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "hessie/fromTrainCars": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5100534,39.9604095;-105.59502767142855,39.9516888?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9604095,
+          "lon": -105.5100534
+        },
+        {
+          "lat": 39.9516888,
+          "lon": -105.59502767142855
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 1705.2,
+      "distanceMeters": 8397.2,
+      "waypoints": [
+        {
+          "distance": 22.73281145,
+          "name": "North Bridge Street",
+          "location": [
+            -105.510319,
+            39.960416
+          ]
+        },
+        {
+          "distance": 1.570389696,
+          "name": "Fourth Of July Road",
+          "location": [
+            -105.595015,
+            39.951699
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 25,
+          "distanceMeters": 224.9,
+          "location": [
+            -105.510319,
+            39.960416
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 44.3,
+          "distanceMeters": 517.6,
+          "location": [
+            -105.51121,
+            39.958597
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Eldora Road",
+          "ref": "CR 130",
+          "mode": "driving",
+          "durationSeconds": 205.7,
+          "distanceMeters": 2208.7,
+          "location": [
+            -105.516868,
+            39.956978
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Eldora Road",
+          "ref": "CR 130",
+          "mode": "driving",
+          "durationSeconds": 259.8,
+          "distanceMeters": 2806.6,
+          "location": [
+            -105.538184,
+            39.948527
+          ],
+          "type": "fork"
+        },
+        {
+          "name": "Klondyke Avenue",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 70.9,
+          "distanceMeters": 492.4,
+          "location": [
+            -105.566914,
+            39.949211
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Klondyke Avenue",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 107.5,
+          "distanceMeters": 745.3,
+          "location": [
+            -105.5725,
+            39.950269
+          ],
+          "type": "fork"
+        },
+        {
+          "name": "Fourth Of July Road",
+          "ref": "CR 111",
+          "mode": "driving",
+          "durationSeconds": 992,
+          "distanceMeters": 1401.7,
+          "location": [
+            -105.581215,
+            39.95025
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Fourth Of July Road",
+          "ref": "CR 111",
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.595015,
+            39.951699
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "hessie/fromKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5115103,39.9620592;-105.59502767142855,39.9516888?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        },
+        {
+          "lat": 39.9516888,
+          "lon": -105.59502767142855
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 1742.9,
+      "distanceMeters": 8659.6,
+      "waypoints": [
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        },
+        {
+          "distance": 1.570389696,
+          "name": "Fourth Of July Road",
+          "location": [
+            -105.595015,
+            39.951699
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 18.9,
+          "distanceMeters": 95,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 43.8,
+          "distanceMeters": 392.3,
+          "location": [
+            -105.510402,
+            39.961874
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 44.3,
+          "distanceMeters": 517.6,
+          "location": [
+            -105.51121,
+            39.958597
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Eldora Road",
+          "ref": "CR 130",
+          "mode": "driving",
+          "durationSeconds": 205.7,
+          "distanceMeters": 2208.7,
+          "location": [
+            -105.516868,
+            39.956978
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Eldora Road",
+          "ref": "CR 130",
+          "mode": "driving",
+          "durationSeconds": 259.8,
+          "distanceMeters": 2806.6,
+          "location": [
+            -105.538184,
+            39.948527
+          ],
+          "type": "fork"
+        },
+        {
+          "name": "Klondyke Avenue",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 70.9,
+          "distanceMeters": 492.4,
+          "location": [
+            -105.566914,
+            39.949211
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Klondyke Avenue",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 107.5,
+          "distanceMeters": 745.3,
+          "location": [
+            -105.5725,
+            39.950269
+          ],
+          "type": "fork"
+        },
+        {
+          "name": "Fourth Of July Road",
+          "ref": "CR 111",
+          "mode": "driving",
+          "durationSeconds": 992,
+          "distanceMeters": 1401.7,
+          "location": [
+            -105.581215,
+            39.95025
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Fourth Of July Road",
+          "ref": "CR 111",
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.595015,
+            39.951699
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "hessie/toKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.59502767142855,39.9516888;-105.5115103,39.9620592?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9516888,
+          "lon": -105.59502767142855
+        },
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 1752.7,
+      "distanceMeters": 8659.6,
+      "waypoints": [
+        {
+          "distance": 1.570389696,
+          "name": "Fourth Of July Road",
+          "location": [
+            -105.595015,
+            39.951699
+          ]
+        },
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "Fourth Of July Road",
+          "ref": "CR 111",
+          "mode": "driving",
+          "durationSeconds": 992.7,
+          "distanceMeters": 1401.7,
+          "location": [
+            -105.595015,
+            39.951699
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Klondyke Avenue",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 178.3,
+          "distanceMeters": 1237.7,
+          "location": [
+            -105.581215,
+            39.95025
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Eldora Road",
+          "ref": "CR 130",
+          "mode": "driving",
+          "durationSeconds": 468.4,
+          "distanceMeters": 5015.3,
+          "location": [
+            -105.566914,
+            39.949211
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 51.6,
+          "distanceMeters": 545,
+          "location": [
+            -105.516868,
+            39.956978
+          ],
+          "type": "end of road"
+        },
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 47.9,
+          "distanceMeters": 365,
+          "location": [
+            -105.510972,
+            39.958761
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 13.8,
+          "distanceMeters": 95,
+          "location": [
+            -105.510402,
+            39.961874
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "fourth/fromTrainCars": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5100534,39.9604095;-105.6342,39.995?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9604095,
+          "lon": -105.5100534
+        },
+        {
+          "lat": 39.995,
+          "lon": -105.6342
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 2667,
+      "distanceMeters": 14962.8,
+      "waypoints": [
+        {
+          "distance": 22.73281145,
+          "name": "North Bridge Street",
+          "location": [
+            -105.510319,
+            39.960416
+          ]
+        },
+        {
+          "distance": 8.628638475,
+          "name": "",
+          "location": [
+            -105.634301,
+            39.995001
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 25,
+          "distanceMeters": 224.9,
+          "location": [
+            -105.510319,
+            39.960416
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 44.3,
+          "distanceMeters": 517.6,
+          "location": [
+            -105.51121,
+            39.958597
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Eldora Road",
+          "ref": "CR 130",
+          "mode": "driving",
+          "durationSeconds": 205.7,
+          "distanceMeters": 2208.7,
+          "location": [
+            -105.516868,
+            39.956978
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Eldora Road",
+          "ref": "CR 130",
+          "mode": "driving",
+          "durationSeconds": 259.8,
+          "distanceMeters": 2806.6,
+          "location": [
+            -105.538184,
+            39.948527
+          ],
+          "type": "fork"
+        },
+        {
+          "name": "Klondyke Avenue",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 70.9,
+          "distanceMeters": 492.4,
+          "location": [
+            -105.566914,
+            39.949211
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Klondyke Avenue",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 107.5,
+          "distanceMeters": 745.3,
+          "location": [
+            -105.5725,
+            39.950269
+          ],
+          "type": "fork"
+        },
+        {
+          "name": "Fourth Of July Road",
+          "ref": "CR 111",
+          "mode": "driving",
+          "durationSeconds": 1911.1,
+          "distanceMeters": 7788.6,
+          "location": [
+            -105.581215,
+            39.95025
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 42.7,
+          "distanceMeters": 178.6,
+          "location": [
+            -105.633982,
+            39.994091
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.634301,
+            39.995001
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "fourth/fromKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5115103,39.9620592;-105.6342,39.995?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        },
+        {
+          "lat": 39.995,
+          "lon": -105.6342
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 2704.7,
+      "distanceMeters": 15225.2,
+      "waypoints": [
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        },
+        {
+          "distance": 8.628638475,
+          "name": "",
+          "location": [
+            -105.634301,
+            39.995001
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 18.9,
+          "distanceMeters": 95,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 43.8,
+          "distanceMeters": 392.3,
+          "location": [
+            -105.510402,
+            39.961874
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 44.3,
+          "distanceMeters": 517.6,
+          "location": [
+            -105.51121,
+            39.958597
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Eldora Road",
+          "ref": "CR 130",
+          "mode": "driving",
+          "durationSeconds": 205.7,
+          "distanceMeters": 2208.7,
+          "location": [
+            -105.516868,
+            39.956978
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Eldora Road",
+          "ref": "CR 130",
+          "mode": "driving",
+          "durationSeconds": 259.8,
+          "distanceMeters": 2806.6,
+          "location": [
+            -105.538184,
+            39.948527
+          ],
+          "type": "fork"
+        },
+        {
+          "name": "Klondyke Avenue",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 70.9,
+          "distanceMeters": 492.4,
+          "location": [
+            -105.566914,
+            39.949211
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Klondyke Avenue",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 107.5,
+          "distanceMeters": 745.3,
+          "location": [
+            -105.5725,
+            39.950269
+          ],
+          "type": "fork"
+        },
+        {
+          "name": "Fourth Of July Road",
+          "ref": "CR 111",
+          "mode": "driving",
+          "durationSeconds": 1911.1,
+          "distanceMeters": 7788.6,
+          "location": [
+            -105.581215,
+            39.95025
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 42.7,
+          "distanceMeters": 178.6,
+          "location": [
+            -105.633982,
+            39.994091
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.634301,
+            39.995001
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "fourth/toKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.6342,39.995;-105.5115103,39.9620592?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.995,
+          "lon": -105.6342
+        },
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 2714.9,
+      "distanceMeters": 15225.2,
+      "waypoints": [
+        {
+          "distance": 8.628638475,
+          "name": "",
+          "location": [
+            -105.634301,
+            39.995001
+          ]
+        },
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 43.3,
+          "distanceMeters": 178.6,
+          "location": [
+            -105.634301,
+            39.995001
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Fourth Of July Road",
+          "ref": "CR 111",
+          "mode": "driving",
+          "durationSeconds": 1911.6,
+          "distanceMeters": 7788.6,
+          "location": [
+            -105.633982,
+            39.994091
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Klondyke Avenue",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 178.3,
+          "distanceMeters": 1237.7,
+          "location": [
+            -105.581215,
+            39.95025
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Eldora Road",
+          "ref": "CR 130",
+          "mode": "driving",
+          "durationSeconds": 468.4,
+          "distanceMeters": 5015.3,
+          "location": [
+            -105.566914,
+            39.949211
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 51.6,
+          "distanceMeters": 545,
+          "location": [
+            -105.516868,
+            39.956978
+          ],
+          "type": "end of road"
+        },
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 47.9,
+          "distanceMeters": 365,
+          "location": [
+            -105.510972,
+            39.958761
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 13.8,
+          "distanceMeters": 95,
+          "location": [
+            -105.510402,
+            39.961874
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "long/fromTrainCars": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5100534,39.9604095;-105.5844,40.0778?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9604095,
+          "lon": -105.5100534
+        },
+        {
+          "lat": 40.0778,
+          "lon": -105.5844
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 2639.6,
+      "distanceMeters": 28688.6,
+      "waypoints": [
+        {
+          "distance": 22.73281145,
+          "name": "North Bridge Street",
+          "location": [
+            -105.510319,
+            39.960416
+          ]
+        },
+        {
+          "distance": 9.031243431,
+          "name": "",
+          "location": [
+            -105.584322,
+            40.077855
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 25.2,
+          "distanceMeters": 242.8,
+          "location": [
+            -105.510319,
+            39.960416
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 2.7,
+          "distanceMeters": 49.7,
+          "location": [
+            -105.510201,
+            39.96252
+          ],
+          "type": "roundabout"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 46.6,
+          "distanceMeters": 482.8,
+          "location": [
+            -105.510428,
+            39.962653
+          ],
+          "type": "exit roundabout"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 1184.6,
+          "distanceMeters": 18491,
+          "location": [
+            -105.515818,
+            39.963306
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Brainard Lake Road",
+          "ref": "CR 102",
+          "mode": "driving",
+          "durationSeconds": 1241.4,
+          "distanceMeters": 8608.1,
+          "location": [
+            -105.502884,
+            40.075924
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Mitchell Lake Road",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 30.2,
+          "distanceMeters": 177.7,
+          "location": [
+            -105.578648,
+            40.079184
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Long Lake Road",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 65.9,
+          "distanceMeters": 457.3,
+          "location": [
+            -105.579473,
+            40.080464
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 43,
+          "distanceMeters": 179.2,
+          "location": [
+            -105.583427,
+            40.078069
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.584322,
+            40.077855
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "long/fromKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5115103,39.9620592;-105.5844,40.0778?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        },
+        {
+          "lat": 40.0778,
+          "lon": -105.5844
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 2623.3,
+      "distanceMeters": 28380.4,
+      "waypoints": [
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        },
+        {
+          "distance": 9.031243431,
+          "name": "",
+          "location": [
+            -105.584322,
+            40.077855
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 10.4,
+          "distanceMeters": 58.4,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Jackson Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 16.6,
+          "distanceMeters": 78.3,
+          "location": [
+            -105.512198,
+            39.961895
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 31.2,
+          "distanceMeters": 330.4,
+          "location": [
+            -105.512196,
+            39.9626
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 1184.6,
+          "distanceMeters": 18491,
+          "location": [
+            -105.515818,
+            39.963306
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Brainard Lake Road",
+          "ref": "CR 102",
+          "mode": "driving",
+          "durationSeconds": 1241.4,
+          "distanceMeters": 8608.1,
+          "location": [
+            -105.502884,
+            40.075924
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Mitchell Lake Road",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 30.2,
+          "distanceMeters": 177.7,
+          "location": [
+            -105.578648,
+            40.079184
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Long Lake Road",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 65.9,
+          "distanceMeters": 457.3,
+          "location": [
+            -105.579473,
+            40.080464
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 43,
+          "distanceMeters": 179.2,
+          "location": [
+            -105.583427,
+            40.078069
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.584322,
+            40.077855
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "long/toKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5844,40.0778;-105.5115103,39.9620592?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 40.0778,
+          "lon": -105.5844
+        },
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 2596.9,
+      "distanceMeters": 28284.2,
+      "waypoints": [
+        {
+          "distance": 9.031243431,
+          "name": "",
+          "location": [
+            -105.584322,
+            40.077855
+          ]
+        },
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 21.8,
+          "distanceMeters": 90,
+          "location": [
+            -105.584322,
+            40.077855
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Long Lake Road",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 66.9,
+          "distanceMeters": 457.3,
+          "location": [
+            -105.583427,
+            40.078069
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Mitchell Lake Road",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 26.1,
+          "distanceMeters": 177.7,
+          "location": [
+            -105.579473,
+            40.080464
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Brainard Lake Road",
+          "ref": "CR 102",
+          "mode": "driving",
+          "durationSeconds": 1242.1,
+          "distanceMeters": 8601,
+          "location": [
+            -105.578648,
+            40.079184
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 1188.2,
+          "distanceMeters": 18572.1,
+          "location": [
+            -105.502884,
+            40.075924
+          ],
+          "type": "end of road"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 26.8,
+          "distanceMeters": 249.3,
+          "location": [
+            -105.515059,
+            39.96289
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Jackson Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 16.6,
+          "distanceMeters": 78.3,
+          "location": [
+            -105.512196,
+            39.9626
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 8.4,
+          "distanceMeters": 58.4,
+          "location": [
+            -105.512198,
+            39.961895
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "mitchell/fromTrainCars": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5100534,39.9604095;-105.5817,40.0831?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9604095,
+          "lon": -105.5100534
+        },
+        {
+          "lat": 40.0831,
+          "lon": -105.5817
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 2638.4,
+      "distanceMeters": 28674.1,
+      "waypoints": [
+        {
+          "distance": 22.73281145,
+          "name": "North Bridge Street",
+          "location": [
+            -105.510319,
+            39.960416
+          ]
+        },
+        {
+          "distance": 1.805020409,
+          "name": "",
+          "location": [
+            -105.581679,
+            40.083102
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 25.2,
+          "distanceMeters": 242.8,
+          "location": [
+            -105.510319,
+            39.960416
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 2.7,
+          "distanceMeters": 49.7,
+          "location": [
+            -105.510201,
+            39.96252
+          ],
+          "type": "roundabout"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 46.6,
+          "distanceMeters": 482.8,
+          "location": [
+            -105.510428,
+            39.962653
+          ],
+          "type": "exit roundabout"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 1184.6,
+          "distanceMeters": 18491,
+          "location": [
+            -105.515818,
+            39.963306
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Brainard Lake Road",
+          "ref": "CR 102",
+          "mode": "driving",
+          "durationSeconds": 1241.4,
+          "distanceMeters": 8608.1,
+          "location": [
+            -105.502884,
+            40.075924
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Mitchell Lake Road",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 82.5,
+          "distanceMeters": 569.2,
+          "location": [
+            -105.578648,
+            40.079184
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 55.4,
+          "distanceMeters": 230.6,
+          "location": [
+            -105.580994,
+            40.082638
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.581679,
+            40.083102
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "mitchell/fromKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5115103,39.9620592;-105.5817,40.0831?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        },
+        {
+          "lat": 40.0831,
+          "lon": -105.5817
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 2622.1,
+      "distanceMeters": 28365.9,
+      "waypoints": [
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        },
+        {
+          "distance": 1.805020409,
+          "name": "",
+          "location": [
+            -105.581679,
+            40.083102
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 10.4,
+          "distanceMeters": 58.4,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Jackson Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 16.6,
+          "distanceMeters": 78.3,
+          "location": [
+            -105.512198,
+            39.961895
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 31.2,
+          "distanceMeters": 330.4,
+          "location": [
+            -105.512196,
+            39.9626
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 1184.6,
+          "distanceMeters": 18491,
+          "location": [
+            -105.515818,
+            39.963306
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Brainard Lake Road",
+          "ref": "CR 102",
+          "mode": "driving",
+          "durationSeconds": 1241.4,
+          "distanceMeters": 8608.1,
+          "location": [
+            -105.502884,
+            40.075924
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Mitchell Lake Road",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 82.5,
+          "distanceMeters": 569.2,
+          "location": [
+            -105.578648,
+            40.079184
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 55.4,
+          "distanceMeters": 230.6,
+          "location": [
+            -105.580994,
+            40.082638
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.581679,
+            40.083102
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "mitchell/toKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5817,40.0831;-105.5115103,39.9620592?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 40.0831,
+          "lon": -105.5817
+        },
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 2583.8,
+      "distanceMeters": 28208.6,
+      "waypoints": [
+        {
+          "distance": 1.805020409,
+          "name": "",
+          "location": [
+            -105.581679,
+            40.083102
+          ]
+        },
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 19.3,
+          "distanceMeters": 80.3,
+          "location": [
+            -105.581679,
+            40.083102
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Mitchell Lake Road",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 82.4,
+          "distanceMeters": 569.2,
+          "location": [
+            -105.580994,
+            40.082638
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Brainard Lake Road",
+          "ref": "CR 102",
+          "mode": "driving",
+          "durationSeconds": 1242.1,
+          "distanceMeters": 8601,
+          "location": [
+            -105.578648,
+            40.079184
+          ],
+          "type": "end of road"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 1188.2,
+          "distanceMeters": 18572.1,
+          "location": [
+            -105.502884,
+            40.075924
+          ],
+          "type": "end of road"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 26.8,
+          "distanceMeters": 249.3,
+          "location": [
+            -105.515059,
+            39.96289
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Jackson Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 16.6,
+          "distanceMeters": 78.3,
+          "location": [
+            -105.512196,
+            39.9626
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 8.4,
+          "distanceMeters": 58.4,
+          "location": [
+            -105.512198,
+            39.961895
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "niwot/fromTrainCars": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5100534,39.9604095;-105.57734224000001,40.076534093333336?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9604095,
+          "lon": -105.5100534
+        },
+        {
+          "lat": 40.076534093333336,
+          "lon": -105.57734224000001
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 2450.5,
+      "distanceMeters": 27540.9,
+      "waypoints": [
+        {
+          "distance": 22.73281145,
+          "name": "North Bridge Street",
+          "location": [
+            -105.510319,
+            39.960416
+          ]
+        },
+        {
+          "distance": 6.155692508,
+          "name": "Brainard Lake Road",
+          "location": [
+            -105.577399,
+            40.0765
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "North Bridge Street",
+          "ref": "CO 119; CO 72",
+          "mode": "driving",
+          "durationSeconds": 25.2,
+          "distanceMeters": 242.8,
+          "location": [
+            -105.510319,
+            39.960416
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 2.7,
+          "distanceMeters": 49.7,
+          "location": [
+            -105.510201,
+            39.96252
+          ],
+          "type": "roundabout"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 46.6,
+          "distanceMeters": 482.8,
+          "location": [
+            -105.510428,
+            39.962653
+          ],
+          "type": "exit roundabout"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 1184.6,
+          "distanceMeters": 18491,
+          "location": [
+            -105.515818,
+            39.963306
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Brainard Lake Road",
+          "ref": "CR 102",
+          "mode": "driving",
+          "durationSeconds": 1191.4,
+          "distanceMeters": 8274.5,
+          "location": [
+            -105.502884,
+            40.075924
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Brainard Lake Road",
+          "ref": "CR 102",
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.577399,
+            40.0765
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "niwot/fromKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.5115103,39.9620592;-105.57734224000001,40.076534093333336?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        },
+        {
+          "lat": 40.076534093333336,
+          "lon": -105.57734224000001
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 2434.2,
+      "distanceMeters": 27232.7,
+      "waypoints": [
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        },
+        {
+          "distance": 6.155692508,
+          "name": "Brainard Lake Road",
+          "location": [
+            -105.577399,
+            40.0765
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 10.4,
+          "distanceMeters": 58.4,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Jackson Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 16.6,
+          "distanceMeters": 78.3,
+          "location": [
+            -105.512198,
+            39.961895
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 31.2,
+          "distanceMeters": 330.4,
+          "location": [
+            -105.512196,
+            39.9626
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 1184.6,
+          "distanceMeters": 18491,
+          "location": [
+            -105.515818,
+            39.963306
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Brainard Lake Road",
+          "ref": "CR 102",
+          "mode": "driving",
+          "durationSeconds": 1191.4,
+          "distanceMeters": 8274.5,
+          "location": [
+            -105.502884,
+            40.075924
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "Brainard Lake Road",
+          "ref": "CR 102",
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.577399,
+            40.0765
+          ],
+          "type": "arrive"
+        }
+      ]
+    },
+    "niwot/toKathmandu": {
+      "url": "https://router.project-osrm.org/route/v1/driving/-105.57734224000001,40.076534093333336;-105.5115103,39.9620592?overview=false&steps=true&generate_hints=false&radiuses=150;150",
+      "requested": [
+        {
+          "lat": 40.076534093333336,
+          "lon": -105.57734224000001
+        },
+        {
+          "lat": 39.9620592,
+          "lon": -105.5115103
+        }
+      ],
+      "code": "Ok",
+      "dataVersion": null,
+      "durationSeconds": 2434.1,
+      "distanceMeters": 27225.6,
+      "waypoints": [
+        {
+          "distance": 6.155692508,
+          "name": "Brainard Lake Road",
+          "location": [
+            -105.577399,
+            40.0765
+          ]
+        },
+        {
+          "distance": 19.21194727,
+          "name": "West 1st Street",
+          "location": [
+            -105.511514,
+            39.961886
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "name": "Brainard Lake Road",
+          "ref": "CR 102",
+          "mode": "driving",
+          "durationSeconds": 1194.1,
+          "distanceMeters": 8267.5,
+          "location": [
+            -105.577399,
+            40.0765
+          ],
+          "type": "depart"
+        },
+        {
+          "name": "Peak-to-Peak Highway",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 1188.2,
+          "distanceMeters": 18572.1,
+          "location": [
+            -105.502884,
+            40.075924
+          ],
+          "type": "end of road"
+        },
+        {
+          "name": "West 2nd Street",
+          "ref": "CO 72",
+          "mode": "driving",
+          "durationSeconds": 26.8,
+          "distanceMeters": 249.3,
+          "location": [
+            -105.515059,
+            39.96289
+          ],
+          "type": "new name"
+        },
+        {
+          "name": "Jackson Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 16.6,
+          "distanceMeters": 78.3,
+          "location": [
+            -105.512196,
+            39.9626
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 8.4,
+          "distanceMeters": 58.4,
+          "location": [
+            -105.512198,
+            39.961895
+          ],
+          "type": "turn"
+        },
+        {
+          "name": "West 1st Street",
+          "ref": null,
+          "mode": "driving",
+          "durationSeconds": 0,
+          "distanceMeters": 0,
+          "location": [
+            -105.511514,
+            39.961886
+          ],
+          "type": "arrive"
+        }
+      ]
+    }
+  }
+}
