@@ -2,7 +2,8 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
-const source = fs.readFileSync(require('node:path').join(__dirname, '../script.js'), 'utf8');
+const source = fs.readFileSync(require('node:path').join(__dirname, '../trail-access.js'), 'utf8') + '\n'
+  + fs.readFileSync(require('node:path').join(__dirname, '../script.js'), 'utf8');
 const now = Date.parse('2026-10-02T13:30:00Z');
 
 function harness(fetch, storage = new Map()) {
@@ -72,8 +73,8 @@ test('real catalog comparison: Madison, Beacon, Caribou use the same rendering a
     assert.equal(urls.at(-1).searchParams.get('timeformat'), 'unixtime');
     assert.doesNotMatch(app.text('#updated-value'), /Invalid/);
   }
-  assert.equal(app.text('#coop-drive'), 'Not available');
-  assert.equal(app.text('#frosty-drive'), 'Not available');
+  assert.equal(app.text('#coop-drive'), 'Approx. 5–10 min');
+  assert.equal(app.text('#frosty-drive'), 'Approx. 5–10 min');
   const before = urls.filter(url => url.hostname === 'photon.komoot.io').length;
   await app.run('loadWeather(currentTrail)');
   assert.equal(urls.filter(url => url.hostname === 'photon.komoot.io').length, before);
@@ -97,6 +98,75 @@ test('missing fields across every catalog entry never render undefined or NaN', 
       assert.doesNotMatch(result, /undefined|null|NaN/);
     }
   }
+});
+
+test('all 21 Nederland trails have sourced access, three routed directions and approximate ranges', async () => {
+  const app = harness(async () => response(weather()));
+  const records = app.run('nederlandTrails');
+  assert.equal(records.length, 21);
+  app.run('switchLocation("NED")');
+  const observed = JSON.parse(fs.readFileSync(require('node:path').join(__dirname, '../research/nederland/google-routes.json'), 'utf8'));
+  const destinations = app.run('trailAccessData.destinations');
+  assert.equal(Object.keys(destinations).length, 12);
+  for (const trail of records) {
+    const literal = JSON.stringify(trail);
+    const access = app.run(`getDrivingAccess(${literal})`);
+    assert.ok(access, trail.name);
+    assert.ok(['High', 'Medium'].includes(access.confidence));
+    assert.ok(access.sources.some(source => /bouldercounty.gov|fs.usda.gov|openstreetmap.org|nederlandco.org/.test(new URL(source.url).hostname)));
+    assert.ok(access.sources.every(source => source.evidence && source.url.startsWith('https://')));
+    for (const direction of ['fromTrainCars', 'fromKathmandu', 'toKathmandu']) {
+      const estimate = app.run(`formatDriveEstimate(getDrivingAccess(${literal}), '${direction}')`);
+      assert.match(estimate, /^Approx\. \d+–\d+ min$/);
+      const route = observed.routes[app.run(`trailAccessData.regions.NED[${JSON.stringify(trail.name)}]`) + '/' + direction];
+      assert.equal(access.estimates[direction].source, route.requestedUrl);
+      assert.equal(access.estimates[direction].baselineMinutes, Number(route.cards[0].match(/(\d+) min/)[1]));
+      assert.ok(access.rangeMinutes[0] <= access.estimates[direction].baselineMinutes);
+      assert.ok(access.rangeMinutes[1] >= access.estimates[direction].baselineMinutes);
+    }
+    await app.run(`renderTrail(${literal}, 'quick')`);
+    assert.match(app.text('#coop-drive'), /^Approx\./);
+    assert.match(app.text('#frosty-drive'), /^Approx\./);
+    assert.ok(app.text('#drive-destination').includes(access.name));
+    assert.equal(app.run('els.driveDetails.hidden'), false);
+  }
+});
+
+test('map destinations share verified parking rather than lake or summit search terms', () => {
+  const app = harness();
+  app.run('switchLocation("NED")');
+  const destination = name => app.run(`getTrailDrivingDestination(nederlandTrails.find(t => t.name === ${JSON.stringify(name)}))`);
+  assert.equal(destination('Lost Lake via Hessie'), destination('Hessie Trailhead'));
+  assert.equal(destination('Jasper Lake Trail'), destination('Hessie Trailhead'));
+  assert.equal(destination('Diamond Lake Trail'), destination('Fourth of July Trailhead'));
+  assert.equal(destination('Arapaho Pass Trail'), destination('Fourth of July Trailhead'));
+  assert.equal(destination('Lake Isabelle Trail'), destination('Long Lake Trailhead'));
+  assert.equal(destination('Blue Lake Trail'), destination('Mitchell Lake Trailhead'));
+  assert.match(destination('Lost Lake via Hessie'), /^39\.9516888,-105\.59502767$/);
+  for (const id of ['rainbow', 'sugarloaf']) {
+    const url = new URL(app.run(`buildDirectionsUrl('Nederland', 'parking', trailAccessData.destinations.${id}.approachWaypoints)`));
+    assert.equal(url.searchParams.get('travelmode'), 'driving');
+    assert.ok(url.searchParams.get('waypoints'));
+  }
+});
+
+test('inferred access is labeled and switching regions clears the Nederland evidence', async () => {
+  const app = harness(async () => response(weather()));
+  app.run('switchLocation("NED")');
+  for (const name of ['Gordon Gulch Trail', 'Sugarloaf Mountain Trails']) {
+    await app.run(`renderTrail(nederlandTrails.find(t => t.name === ${JSON.stringify(name)}), 'quick')`);
+    assert.match(app.text('#drive-destination'), /approximate access point/);
+    assert.match(app.text('#drive-confidence'), /Medium/);
+  }
+  app.run('switchLocation("MAD")');
+  assert.equal(app.run('els.driveDetails.hidden'), true);
+  assert.equal(app.text('#drive-destination'), '');
+  await app.run('renderTrail(madisonQuickTrails[0], "quick")');
+  assert.equal(app.text('#coop-drive'), '~18 min');
+  assert.equal(app.run('els.driveDetails.hidden'), true);
+  assert.equal(app.run('getTrailDrivingDestination(madisonQuickTrails[0])'), app.run('madisonQuickTrails[0].address'));
+  assert.equal(app.run('formatDriveEstimate({rangeMinutes:[5,10]}, "fromTrainCars")'), 'Not available');
+  assert.equal(app.run('formatDriveEstimate({rangeMinutes:[-1,10],estimates:{fromTrainCars:{}}}, "fromTrainCars")'), 'Not available');
 });
 
 test('epoch hours and rolling rainfall are independent of the viewer time zone', () => {
