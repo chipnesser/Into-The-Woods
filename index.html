@@ -7,30 +7,13 @@
   <script defer data-domain="chipnesser.github.io" src="https://plausible.io/js/script.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="sky" aria-hidden="true">
-    <div class="sun"></div>
-    <div class="cloud cloud-one"></div>
-    <div class="cloud cloud-two"></div>
-    <div class="cloud cloud-three"></div>
-    <div class="rainbow rainbow-back"></div>
-    <div class="rainbow rainbow-front"></div>
-    <div class="creature dragon dragon-one"></div>
-  </div>
-
-  <div class="pasture pasture-left" aria-hidden="true">
-    <div class="side-animal unicorn side-unicorn"></div>
-    <div class="side-animal deer deer-one"></div>
-    <div class="flowers flowers-left"></div>
-  </div>
-
-  <div class="pasture pasture-right" aria-hidden="true">
-    <div class="side-animal deer deer-two"></div>
-    <div class="side-animal unicorn side-unicorn-two"></div>
-    <div class="flowers flowers-right"></div>
+  <div class="landscape" aria-hidden="true">
+    <div class="cloud-veil cloud-veil-one"></div>
+    <div class="cloud-veil cloud-veil-two"></div>
   </div>
 
   <main class="page-shell">
@@ -87,6 +70,15 @@
         </article>
       </div>
 
+      <details id="drive-details" class="drive-details" hidden>
+        <summary>Driving estimate details</summary>
+        <p id="drive-destination"></p>
+        <p id="drive-confidence"></p>
+        <p id="drive-note"></p>
+        <p id="drive-method"></p>
+        <ul id="drive-sources"></ul>
+      </details>
+
       <div class="weather-card">
         <div class="weather-head">
           <div>
@@ -141,7 +133,12 @@
       </p>
 
       <p class="footnote">
-        Drive times and some trailhead details are starter estimates. Weather is fetched live from Open-Meteo.
+        Drive times are approximate; Nederland ranges use researched parking/access points and road routes.
+        Allow extra time for parking, shuttles and entrance queues. Unrecorded estimates show as unavailable.
+        Weather is fetched live from Open-Meteo. Named-place weather may use a park center;
+        regional weather is labeled when a trail location cannot be confirmed.
+        Place lookup: <a href="https://github.com/komoot/photon" target="_blank" rel="noreferrer">Photon</a>,
+        © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap contributors</a>.
       </p>
 
       <p class="support-note">
@@ -152,6 +149,7 @@
     </section>
   </main>
 
+  <script src="trail-access.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

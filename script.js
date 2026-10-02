@@ -1,5 +1,7 @@
 const DONATION_PLACEHOLDER_URL = "#";
 const DEFAULT_BUCKET = "quick";
+const GEOCODER_URL = "https://photon.komoot.io/api/";
+const COORDINATE_CACHE_TTL = 30 * 24 * 60 * 60 * 1000;
 
 const madisonQuickTrails = [
   {
@@ -638,7 +640,11 @@ const nederlandTrails = [
   {
     name: "Caribou Ranch Open Space",
     nearTown: "Nederland, CO",
+    address: "County Road 126, two miles north of Nederland, CO",
     mapQuery: "Caribou Ranch Open Space trailhead Nederland CO",
+    // DeLonde out-and-back (2 x 1.2 mi) plus Blue Bird Loop (1.8 mi).
+    // https://bouldercounty.gov/open-space/parks-and-trails/caribou-ranch/
+    trailLength: "4.2 mi",
     vibe: "meadows, mining ruins, rolling terrain",
     crowdBias: "low",
     distanceBias: "near",
@@ -1556,13 +1562,22 @@ const els = {
   postHikeLink: document.querySelector("#frosty-link"),
   actionsNote: document.querySelector("#actions-note"),
   supportLink: document.querySelector("#support-link"),
-  resourceLinks: document.querySelector("#resource-links")
+  resourceLinks: document.querySelector("#resource-links"),
+  driveDetails: document.querySelector("#drive-details"),
+  driveDestination: document.querySelector("#drive-destination"),
+  driveConfidence: document.querySelector("#drive-confidence"),
+  driveNote: document.querySelector("#drive-note"),
+  driveMethod: document.querySelector("#drive-method"),
+  driveSources: document.querySelector("#drive-sources")
 };
 
 let currentLocationCode = "MAD";
 let currentBucketKey = DEFAULT_BUCKET;
 let currentTrail = null;
 let currentRequestId = 0;
+let weatherController = null;
+let currentSunsetRequestId = 0;
+const coordinateCache = new Map();
 let quoteBag = [];
 let lastQuote = null;
 let refreshTimerId = null;
@@ -1952,6 +1967,8 @@ function updateLocationCopy() {
 }
 
 function resetResultCard(message) {
+  ++currentRequestId;
+  weatherController?.abort();
   currentTrail = null;
   window.clearTimeout(loadingTimerId);
   setLoadingState(false);
@@ -1961,6 +1978,7 @@ function resetResultCard(message) {
   els.coopDrive.textContent = "-";
   els.trailLength.textContent = "-";
   els.postHikeDrive.textContent = "-";
+  renderDrivingDetails(null);
   els.seasonNote.textContent = "-";
   setWeatherPlaceholder("Waiting for a trail pick.");
   renderWisdom();
@@ -2011,22 +2029,160 @@ function formatTrailAddress(trail) {
   return "Trailhead details coming soon.";
 }
 
+function validCoordinates(latitude, longitude) {
+  if (latitude == null || longitude == null || latitude === "" || longitude === "") return null;
+  if (![latitude, longitude].every((value) => ["string", "number"].includes(typeof value))) return null;
+  if ([latitude, longitude].some((value) => typeof value === "string" && !value.trim())) return null;
+  const lat = Number(latitude);
+  const lon = Number(longitude);
+  return Number.isFinite(lat) && Number.isFinite(lon) && Math.abs(lat) <= 90 && Math.abs(lon) <= 180
+    ? { latitude: lat, longitude: lon }
+    : null;
+}
+
 function getTrailCoordinates(trail) {
-  if (trail.coordinates?.lat != null && trail.coordinates?.lon != null) {
-    return {
-      latitude: trail.coordinates.lat,
-      longitude: trail.coordinates.lon
-    };
+  return validCoordinates(trail.coordinates?.lat, trail.coordinates?.lon)
+    || validCoordinates(trail.latitude, trail.longitude);
+}
+
+function formatEstimate(value) {
+  return typeof value === "string" && value.trim() ? `~${value.trim()}` : "Not available";
+}
+
+function getDrivingAccess(trail, locationCode = currentLocationCode) {
+  if (typeof trailAccessData === "undefined") return null;
+  const id = trailAccessData.regions[locationCode]?.[trail.name];
+  const access = trailAccessData.destinations[id];
+  return access && validCoordinates(access.latitude, access.longitude) ? access : null;
+}
+
+function formatDriveEstimate(access, direction, legacyEstimate) {
+  const [minimum, maximum] = access?.rangeMinutes || [];
+  if (access?.estimates?.[direction] && Number.isFinite(minimum) && Number.isFinite(maximum)
+      && minimum > 0 && maximum > minimum) {
+    return `Approx. ${minimum}–${maximum} min`;
+  }
+  return formatEstimate(legacyEstimate);
+}
+
+function renderDrivingDetails(access) {
+  els.driveDetails.hidden = !access;
+  els.driveDetails.open = false;
+  els.driveSources.textContent = "";
+  els.driveDestination.textContent = "";
+  els.driveConfidence.textContent = "";
+  els.driveNote.textContent = "";
+  els.driveMethod.textContent = "";
+  if (!access) return;
+  els.driveDestination.textContent = `Driving destination: ${access.name}${access.approximateAccess ? " (approximate access point)" : ""}.`;
+  els.driveConfidence.textContent = `Destination confidence: ${access.confidence}. Drive time: approximate.`;
+  els.driveNote.textContent = access.note;
+  els.driveMethod.textContent = `Road routes checked ${trailAccessData.checkedOn}. Times use the named coffee shop and restaurant, with an allowance for uncertain access. Parking, shuttles and entrance queues are additional. These are saved planning estimates; check Maps for current travel time.`;
+  for (const source of [...access.sources,
+    { label: "Google Maps: route from the coffee shop", url: access.estimates.fromTrainCars.source },
+    { label: "Google Maps: return to the restaurant", url: access.estimates.toKathmandu.source }]) {
+    const item = document.createElement("li");
+    const link = document.createElement("a");
+    link.href = source.url;
+    link.textContent = source.label;
+    link.title = source.evidence || "Observed driving route; current conditions may differ.";
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    item.appendChild(link);
+    els.driveSources.appendChild(item);
+  }
+}
+
+function getTrailDrivingDestination(trail) {
+  const access = getDrivingAccess(trail);
+  return access ? `${access.latitude},${access.longitude}` : (trail.mapQuery || trail.address || trail.name);
+}
+
+function buildDirectionsUrl(origin, destination, waypoints = []) {
+  const params = new URLSearchParams({ api: "1", origin, destination, travelmode: "driving" });
+  const validWaypoints = waypoints.filter(point => validCoordinates(point.latitude, point.longitude));
+  if (validWaypoints.length) {
+    params.set("waypoints", validWaypoints.map(point => `${point.latitude},${point.longitude}`).join("|"));
+  }
+  return `https://www.google.com/maps/dir/?${params.toString()}`;
+}
+
+async function fetchJson(url, signal) {
+  const controller = new AbortController();
+  const abort = () => controller.abort();
+  if (signal?.aborted) controller.abort();
+  signal?.addEventListener("abort", abort, { once: true });
+  const timeout = window.setTimeout(abort, 10000);
+  try {
+    const response = await fetch(url, { signal: controller.signal });
+    if (!response.ok) throw new Error(`Request failed (${response.status}).`);
+    return await response.json();
+  } finally {
+    window.clearTimeout(timeout);
+    signal?.removeEventListener("abort", abort);
+  }
+}
+
+function placeWords(name) {
+  return name.toLowerCase().replace(/[’']/g, "").replace(/[^a-z0-9]+/g, " ").trim().split(/\s+/);
+}
+
+function matchingPlace(feature, query, location) {
+  const [lon, lat] = feature.geometry?.coordinates || [];
+  const coordinates = validCoordinates(lat, lon);
+  const props = feature.properties || {};
+  if (!coordinates || !props.name || props.osm_key === "place") return null;
+  const state = location.displayName.split(",").pop().trim();
+  if (props.countrycode?.toUpperCase() !== "US" || props.state !== state) return null;
+  if (Math.abs(lat - location.origin.latitude) > 1 || Math.abs(lon - location.origin.longitude) > 1) return null;
+  const words = placeWords(props.name);
+  const generic = new Set(["trail", "trailhead", "park", "open", "space", "state", "system"]);
+  const identity = placeWords(query.split(/\s+via\s+|\s+-\s+|\//i)[0]).filter((word) => !generic.has(word));
+  if (!identity.length || !identity.every((word) => words.some((candidate) => candidate === word || (word.length >= 4 && candidate.startsWith(word))))) return null;
+  return coordinates;
+}
+
+async function resolveWeatherLocation(trail, location, signal) {
+  const pinned = getTrailCoordinates(trail);
+  if (pinned) return { ...pinned, source: "trail" };
+
+  // Search the named feature, not the informal Google Maps directions phrase.
+  const query = trail.geocodeQuery || trail.name;
+  const key = `into-the-woods:coordinates:v1:${location.code}:${query}`;
+  let cached = coordinateCache.get(key);
+  try {
+    cached ||= JSON.parse(window.localStorage.getItem(key));
+  } catch (error) { /* Storage may be disabled; weather still works. */ }
+  if (cached && Number.isFinite(cached.savedAt) && cached.savedAt <= Date.now() && Date.now() - cached.savedAt < COORDINATE_CACHE_TTL) {
+    const coordinates = validCoordinates(cached.latitude, cached.longitude);
+    if (coordinates) return { ...coordinates, source: "place" };
   }
 
-  if (trail.latitude != null && trail.longitude != null) {
-    return {
-      latitude: trail.latitude,
-      longitude: trail.longitude
-    };
+  try {
+    const { latitude, longitude } = location.origin;
+    const params = new URLSearchParams({
+      q: query,
+      lat: latitude,
+      lon: longitude,
+      bbox: [longitude - 1, latitude - 1, longitude + 1, latitude + 1].join(","),
+      limit: "5",
+      lang: "en"
+    });
+    const data = await fetchJson(`${GEOCODER_URL}?${params}`, signal);
+    const coordinates = data.features?.map((feature) => matchingPlace(feature, query, location)).find(Boolean);
+    if (coordinates) {
+      cached = { ...coordinates, savedAt: Date.now() };
+      coordinateCache.set(key, cached);
+      try { window.localStorage.setItem(key, JSON.stringify(cached)); } catch (error) { /* Optional cache. */ }
+      return { ...coordinates, source: "place" };
+    }
+  } catch (error) {
+    if (signal?.aborted) throw error;
   }
 
-  return null;
+  // A regional fallback is explicitly labeled; it is never called trailhead weather.
+  const regional = validCoordinates(location.origin.latitude, location.origin.longitude);
+  return regional ? { ...regional, source: "region" } : null;
 }
 
 function getTrailFeel(trail, location) {
@@ -2048,9 +2204,11 @@ function renderTrail(trail, bucketKey) {
   els.bucketLabel.textContent = getBucketLabel(bucketKey);
   els.trailName.textContent = trail.name;
   els.trailAddress.textContent = formatTrailAddress(trail);
-  els.coopDrive.textContent = `~${trail.coopDrive}`;
-  els.trailLength.textContent = `~${trail.trailLength}`;
-  els.postHikeDrive.textContent = `~${trail.postHikeDrive}`;
+  const drivingAccess = getDrivingAccess(trail);
+  els.coopDrive.textContent = formatDriveEstimate(drivingAccess, "fromTrainCars", trail.coopDrive);
+  els.trailLength.textContent = formatEstimate(trail.trailLength);
+  els.postHikeDrive.textContent = formatDriveEstimate(drivingAccess, "toKathmandu", trail.postHikeDrive);
+  renderDrivingDetails(drivingAccess);
   els.seasonNote.textContent = getTrailFeel(trail, location);
   els.rerollButton.disabled = false;
   window.clearTimeout(loadingTimerId);
@@ -2062,7 +2220,7 @@ function renderTrail(trail, bucketKey) {
   renderCrowdLine();
   setLinkState(els.mapsLink, "#", true, "Open Trailhead In Google Maps");
   setLinkState(els.postHikeLink, "#", true, location.postHike.linkLabel);
-  loadWeather(trail);
+  return loadWeather(trail);
 }
 
 function pickTrail(bucketKey) {
@@ -2137,7 +2295,7 @@ function closestHourlyValue(hourly, targetDate) {
   let bestDistance = Infinity;
 
   hourly.time.forEach((timeString, index) => {
-    const distance = Math.abs(new Date(timeString).getTime() - targetDate.getTime());
+    const distance = Math.abs(timeString * 1000 - targetDate.getTime());
     if (distance < bestDistance) {
       bestIndex = index;
       bestDistance = distance;
@@ -2152,19 +2310,16 @@ function closestHourlyValue(hourly, targetDate) {
   };
 }
 
-function sumPrevious24Hours(hourly) {
+function sumPrevious24Hours(hourly, now = Date.now()) {
   if (!hourly?.time?.length || !hourly.precipitation?.length) return null;
 
-  const now = Date.now();
   const cutoff = now - 24 * 60 * 60 * 1000;
-
-  return hourly.time.reduce((sum, timeString, index) => {
-    const time = new Date(timeString).getTime();
-    if (time >= cutoff && time <= now) {
-      return sum + (hourly.precipitation[index] || 0);
-    }
-    return sum;
-  }, 0);
+  const samples = hourly.time.flatMap((time, index) => time * 1000 > cutoff && time * 1000 <= now
+    ? [hourly.precipitation[index]] : []);
+  // Missing precipitation is unknown, not zero rain.
+  return samples.length === 24 && samples.every(Number.isFinite)
+    ? samples.reduce((sum, value) => sum + value, 0)
+    : null;
 }
 
 function setWeatherPlaceholder(message) {
@@ -2177,17 +2332,29 @@ function setWeatherPlaceholder(message) {
   els.updated.textContent = "-";
 }
 
+function weatherMetric(value, suffix) {
+  return Number.isFinite(value) ? `${Math.round(value)}${suffix}` : "n/a";
+}
+
+function currentOrHourly(current, hourly) {
+  return Number.isFinite(current) ? current : hourly;
+}
+
 async function loadWeather(trail) {
   const requestId = ++currentRequestId;
+  weatherController?.abort();
+  const controller = new AbortController();
+  weatherController = controller;
+  const location = getLocationConfig();
   setWeatherPlaceholder("Looking up live conditions...");
-  const coordinates = getTrailCoordinates(trail);
-
-  if (!coordinates) {
-    setWeatherPlaceholder("Weather not pinned for this trail yet.");
-    return;
-  }
 
   try {
+    const coordinates = await resolveWeatherLocation(trail, location, controller.signal);
+    if (requestId !== currentRequestId) return;
+    if (!coordinates) {
+      setWeatherPlaceholder("Weather location unavailable for this trail.");
+      return;
+    }
     const params = new URLSearchParams({
       latitude: coordinates.latitude,
       longitude: coordinates.longitude,
@@ -2196,34 +2363,32 @@ async function loadWeather(trail) {
       temperature_unit: "fahrenheit",
       wind_speed_unit: "mph",
       precipitation_unit: "inch",
-      timezone: getLocationConfig().origin.timezone,
+      timezone: location.origin.timezone,
+      timeformat: "unixtime",
       past_days: "1",
       forecast_days: "1"
     });
 
-    const response = await fetch(`https://api.open-meteo.com/v1/forecast?${params.toString()}`);
-    if (!response.ok) throw new Error("Weather request failed.");
-
-    const data = await response.json();
+    const data = await fetchJson(`https://api.open-meteo.com/v1/forecast?${params.toString()}`, controller.signal);
     if (requestId !== currentRequestId) return;
 
-    const currentTime = new Date(data.current?.time || Date.now());
+    if (!Number.isFinite(data.current?.time)) throw new Error("Missing weather timestamp.");
+    const currentTime = new Date(data.current.time * 1000);
     const hourlyMatch = closestHourlyValue(data.hourly, currentTime);
     const rainTotal = sumPrevious24Hours(data.hourly);
 
-    els.weatherStatus.textContent = `Conditions at ${trail.name}`;
-    els.temp.textContent = data.current?.temperature_2m != null || hourlyMatch?.temperature != null
-      ? `${Math.round(data.current?.temperature_2m ?? hourlyMatch?.temperature)}°F`
-      : "n/a";
-    els.feelsLike.textContent = data.current?.apparent_temperature != null || hourlyMatch?.apparentTemperature != null
-      ? `${Math.round(data.current?.apparent_temperature ?? hourlyMatch?.apparentTemperature)}°F`
-      : "n/a";
-    els.rainChance.textContent = hourlyMatch?.rainChance != null ? `${Math.round(hourlyMatch.rainChance)}%` : "n/a";
+    const status = coordinates.source === "region"
+      ? `Regional conditions near ${location.displayName}; trail location unconfirmed.`
+      : coordinates.source === "place" ? `Conditions near ${trail.name}` : `Conditions at ${trail.name}`;
+    els.weatherStatus.textContent = status;
+    els.temp.textContent = weatherMetric(currentOrHourly(data.current?.temperature_2m, hourlyMatch?.temperature), "°F");
+    els.feelsLike.textContent = weatherMetric(currentOrHourly(data.current?.apparent_temperature, hourlyMatch?.apparentTemperature), "°F");
+    els.rainChance.textContent = weatherMetric(hourlyMatch?.rainChance, "%");
     els.rainTotal.textContent = rainTotal != null ? `${rainTotal.toFixed(2)} in` : "n/a";
-    els.wind.textContent = data.current?.wind_speed_10m != null || hourlyMatch?.windSpeed != null
-      ? `${Math.round(data.current?.wind_speed_10m ?? hourlyMatch?.windSpeed)} mph`
-      : "n/a";
-    els.updated.textContent = currentTime.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+    els.wind.textContent = weatherMetric(currentOrHourly(data.current?.wind_speed_10m, hourlyMatch?.windSpeed), " mph");
+    els.updated.textContent = currentTime.toLocaleTimeString([], {
+      timeZone: location.origin.timezone, hour: "numeric", minute: "2-digit", timeZoneName: "short"
+    });
   } catch (error) {
     if (requestId !== currentRequestId) return;
     setWeatherPlaceholder("Weather lookup had a little woodland hiccup. Try again in a moment.");
@@ -2256,27 +2421,28 @@ async function getOriginForMaps() {
   }
 }
 
-async function openDirections(destination) {
+async function openDirections(destination, waypoints = []) {
   if (!currentTrail) return;
+  const location = getLocationConfig();
 
   const openedWindow = window.open("", "_blank");
   if (!openedWindow) {
-    els.weatherStatus.textContent = "Your browser blocked the map pop-up. Try again and allow pop-ups.";
+    els.actionsNote.textContent = "Your browser blocked the map pop-up. Try again and allow pop-ups.";
     return;
   }
 
   openedWindow.document.write("<title>Opening Maps...</title><p style='font-family: sans-serif; padding: 1rem;'>Opening Google Maps...</p>");
-  els.weatherStatus.textContent = "Opening maps...";
+  els.actionsNote.textContent = "Opening maps...";
 
   try {
     const origin = await getOriginForMaps();
-    const url = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}`;
+    const url = buildDirectionsUrl(origin, destination, waypoints);
     openedWindow.location.replace(url);
   } catch (error) {
-    const url = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(getLocationConfig().origin.address)}&destination=${encodeURIComponent(destination)}`;
+    const url = buildDirectionsUrl(location.origin.address, destination, waypoints);
     openedWindow.location.replace(url);
   } finally {
-    els.weatherStatus.textContent = `Conditions at ${currentTrail.name}`;
+    els.actionsNote.textContent = `Map links use your current location if you allow it, otherwise they start from ${getLocationConfig().origin.name}.`;
   }
 }
 
@@ -2321,7 +2487,9 @@ async function getSunsetContext() {
 }
 
 async function renderSunsetLine() {
+  const requestId = ++currentSunsetRequestId;
   const sunsetContext = await getSunsetContext();
+  if (requestId !== currentSunsetRequestId) return;
   const nowLocal = nowPartsForTimeZone(sunsetContext.timeZone);
 
   if (nowLocal.hour < 14) {
@@ -2336,17 +2504,16 @@ async function renderSunsetLine() {
       longitude: sunsetContext.longitude,
       daily: "sunset",
       timezone: sunsetContext.timeZone,
+      timeformat: "unixtime",
       forecast_days: "1"
     });
 
-    const response = await fetch(`https://api.open-meteo.com/v1/forecast?${params.toString()}`);
-    if (!response.ok) throw new Error("Sunset request failed.");
+    const data = await fetchJson(`https://api.open-meteo.com/v1/forecast?${params.toString()}`);
+    if (requestId !== currentSunsetRequestId) return;
+    const sunsetTime = data.daily?.sunset?.[0];
+    if (!Number.isFinite(sunsetTime)) throw new Error("Missing sunset data.");
 
-    const data = await response.json();
-    const sunsetString = data.daily?.sunset?.[0];
-    if (!sunsetString) throw new Error("Missing sunset data.");
-
-    const sunsetDate = new Date(sunsetString);
+    const sunsetDate = new Date(sunsetTime * 1000);
     const now = new Date();
     const diffMs = sunsetDate.getTime() - now.getTime();
 
@@ -2362,6 +2529,7 @@ async function renderSunsetLine() {
     els.sunsetLine.hidden = false;
     els.sunsetLine.textContent = `Light remaining: ~${hours}h ${minutes}m`;
   } catch (error) {
+    if (requestId !== currentSunsetRequestId) return;
     els.sunsetLine.hidden = true;
     els.sunsetLine.textContent = "";
   }
@@ -2384,7 +2552,7 @@ els.rerollButton.addEventListener("click", () => {
 els.mapsLink.addEventListener("click", async (event) => {
   event.preventDefault();
   if (!currentTrail) return;
-  await openDirections(currentTrail.mapQuery || currentTrail.address || currentTrail.name);
+  await openDirections(getTrailDrivingDestination(currentTrail), getDrivingAccess(currentTrail)?.approachWaypoints);
 });
 els.postHikeLink.addEventListener("click", async (event) => {
   event.preventDefault();
