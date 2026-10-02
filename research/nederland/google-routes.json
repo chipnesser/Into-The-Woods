@@ -1,0 +1,258 @@
+{
+  "checkedOn": "2026-10-02",
+  "provider": "Google Maps web driving routes, Leave now",
+  "routes": {
+    "hessie/fromTrainCars": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=The+Train+Cars,+101+CO-119,+Nederland,+CO&destination=39.9516888,-105.5950277&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/The+Train+Cars+Coffee+and+Kava,+101+CO-119,+Nederland,+CO+80466/39.9516888,-105.5950277/@39.9520708,-105.6348039,12z/data=!3m1!4b1!4m9!4m8!1m5!1m1!1s0x876bc6cfdf3befab:0x81f3a4c61162ad0c!2m2!1d-105.5100386!2d39.9603945!1m0!3e0?entry=ttu&g_ep=EgoyMDI2MDkyOS4wIKXMDSoASAFQAw%3D%3D",
+      "cards": [
+        "13 min5.3 milesvia Eldora Rd and Eldorado Ave Fastest routeFastest route Details Preview"
+      ]
+    },
+    "mud/fromTrainCars": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=39.9791426%2C-105.5079225&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=39.9791426%2C-105.5079225&travelmode=driving",
+      "cards": [
+        "6 min2.6 milesvia CO-72 W Fastest routeFastest route Details Preview"
+      ]
+    },
+    "mud/fromKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=39.9791426%2C-105.5079225&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=39.9791426%2C-105.5079225&travelmode=driving",
+      "cards": [
+        "6 min2.4 milesvia CO-72 W Fastest routeFastest route Details Preview"
+      ]
+    },
+    "mud/toKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9791426%2C-105.5079225&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9791426%2C-105.5079225&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "cards": [
+        "6 min2.4 milesvia CO-72 E Fastest routeFastest route Details Preview"
+      ]
+    },
+    "caribou/fromTrainCars": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=39.9822886%2C-105.5190167&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=39.9822886%2C-105.5190167&travelmode=driving",
+      "cards": [
+        "7 min3.0 milesvia CO-72 W and Co Rd 126 Fastest routeFastest route Details Preview"
+      ]
+    },
+    "caribou/fromKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=39.9822886%2C-105.5190167&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=39.9822886%2C-105.5190167&travelmode=driving",
+      "cards": [
+        "7 min2.8 milesvia CO-72 W and Co Rd 126 Fastest routeFastest route Details Preview"
+      ]
+    },
+    "caribou/toKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9822886%2C-105.5190167&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9822886%2C-105.5190167&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "cards": [
+        "6 min2.8 milesvia Co Rd 126 and CO-72 E Fastest routeFastest route Details Preview"
+      ]
+    },
+    "barker/fromTrainCars": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=39.96457752%2C-105.50371075333334&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=39.96457752%2C-105.50371075333334&travelmode=driving",
+      "cards": [
+        "2 min0.6 milevia Boulder Canyon Dr Fastest route, the usual trafficFastest route, the usual traffic Details Preview"
+      ]
+    },
+    "barker/fromKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=39.96457752%2C-105.50371075333334&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=39.96457752%2C-105.50371075333334&travelmode=driving",
+      "cards": [
+        "2 min0.6 milevia Boulder Canyon Dr Fastest routeFastest route Details Preview"
+      ]
+    },
+    "barker/toKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.96457752%2C-105.50371075333334&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.96457752%2C-105.50371075333334&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "cards": [
+        "2 min0.6 milevia Boulder Canyon Dr Fastest routeFastest route Details Preview"
+      ]
+    },
+    "westMagnolia/fromTrainCars": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=39.94677333%2C-105.5177483&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=39.94677333%2C-105.5177483&travelmode=driving",
+      "cards": [
+        "7 min2.9 milesvia CO-119/CO-72 E and County Hwy 132-W Fastest routeFastest route Details Preview"
+      ]
+    },
+    "westMagnolia/fromKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=39.94677333%2C-105.5177483&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=39.94677333%2C-105.5177483&travelmode=driving",
+      "cards": [
+        "8 min3.2 milesvia CO-119/CO-72 E and County Hwy 132-W Fastest routeFastest route Details Preview"
+      ]
+    },
+    "westMagnolia/toKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.94677333%2C-105.5177483&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.94677333%2C-105.5177483&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "cards": [
+        "8 min3.2 milesvia County Hwy 132-W and CO-72 W Fastest routeFastest route Details Preview"
+      ]
+    },
+    "gordon/fromTrainCars": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=40.009793%2C-105.50171&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=40.009793%2C-105.50171&travelmode=driving",
+      "cards": [
+        "9 min5.3 milesvia CO-72 W Fastest route, the usual trafficFastest route, the usual traffic Details Preview"
+      ]
+    },
+    "gordon/fromKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=40.009793%2C-105.50171&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=40.009793%2C-105.50171&travelmode=driving",
+      "cards": [
+        "8 min5.1 milesvia CO-72 W Fastest route, the usual trafficFastest route, the usual traffic Details Preview"
+      ]
+    },
+    "gordon/toKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=40.009793%2C-105.50171&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=40.009793%2C-105.50171&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "cards": [
+        "8 min5.1 milesvia CO-72 E Fastest route, the usual trafficFastest route, the usual traffic Details Preview"
+      ]
+    },
+    "sugarloaf/fromTrainCars": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=40.0254%2C-105.4252&travelmode=driving&waypoints=40.02016%2C-105.41467",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=40.0254%2C-105.4252&travelmode=driving&waypoints=40.02016%2C-105.41467",
+      "cards": [
+        "21 min9.9 milesvia CO-72 W and Sugarloaf Rd Fastest route, the usual trafficFastest route, the usual traffic Details Preview"
+      ]
+    },
+    "sugarloaf/fromKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=40.0254%2C-105.4252&travelmode=driving&waypoints=40.02016%2C-105.41467",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=40.0254%2C-105.4252&travelmode=driving&waypoints=40.02016%2C-105.41467",
+      "cards": [
+        "20 min9.7 milesvia CO-72 W and Sugarloaf Rd Fastest route, the usual trafficFastest route, the usual traffic Details Preview"
+      ]
+    },
+    "sugarloaf/toKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=40.0254%2C-105.4252&destination=39.9620592%2C-105.5115103&travelmode=driving&waypoints=40.02016%2C-105.41467",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=40.0254%2C-105.4252&destination=39.9620592%2C-105.5115103&travelmode=driving&waypoints=40.02016%2C-105.41467",
+      "cards": [
+        "21 min9.8 milesvia Sugarloaf Mountain Road Fastest route now due to traffic conditionsFastest route now due to traffic conditions Details Preview"
+      ]
+    },
+    "rainbow/fromTrainCars": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=40.00949833%2C-105.5690483&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=40.00949833%2C-105.5690483&travelmode=driving",
+      "cards": [
+        "29 min12.1 milesvia CO-72 W and Co Rd 116 Fastest routeFastest route Details Preview"
+      ]
+    },
+    "rainbow/fromKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=40.00949833%2C-105.5690483&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=40.00949833%2C-105.5690483&travelmode=driving",
+      "cards": [
+        "28 min11.9 milesvia CO-72 W and Co Rd 116 Fastest routeFastest route Details Preview"
+      ]
+    },
+    "rainbow/toKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=40.00949833%2C-105.5690483&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=40.00949833%2C-105.5690483&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "cards": [
+        "27 min11.9 milesvia Co Rd 116 and CO-72 E Fastest routeFastest route Details Preview"
+      ]
+    },
+    "hessie/fromKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=39.9516888%2C-105.59502767142855&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=39.9516888%2C-105.59502767142855&travelmode=driving",
+      "cards": [
+        "14 min5.5 milesvia Eldora Rd and Eldorado Ave Fastest routeFastest route Details Preview"
+      ]
+    },
+    "hessie/toKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9516888%2C-105.59502767142855&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9516888%2C-105.59502767142855&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "cards": [
+        "13 min5.5 milesvia Eldorado Ave and Eldora Rd Fastest route, the usual trafficFastest route, the usual traffic Details Preview"
+      ]
+    },
+    "fourth/fromTrainCars": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=39.995%2C-105.6342&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=39.995%2C-105.6342&travelmode=driving",
+      "cards": [
+        "30 min9.3 milesvia Eldora Rd and Fourth of July Rd Fastest routeFastest route Details Preview"
+      ]
+    },
+    "fourth/fromKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=39.995%2C-105.6342&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=39.995%2C-105.6342&travelmode=driving",
+      "cards": [
+        "32 min9.5 milesvia Eldora Rd and Fourth of July Rd Fastest routeFastest route Details Preview"
+      ]
+    },
+    "fourth/toKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.995%2C-105.6342&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.995%2C-105.6342&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "cards": [
+        "31 min9.6 milesvia Fourth of July Rd and Eldora Rd Fastest routeFastest route Details Preview"
+      ]
+    },
+    "long/fromTrainCars": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=40.0778%2C-105.5844&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=40.0778%2C-105.5844&travelmode=driving",
+      "cards": [
+        "33 min17.8 milesvia CO-72 W and Brainard Lake Rd Fastest routeFastest route Details Preview"
+      ]
+    },
+    "long/fromKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=40.0778%2C-105.5844&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=40.0778%2C-105.5844&travelmode=driving",
+      "cards": [
+        "32 min17.6 milesvia CO-72 W and Brainard Lake Rd Fastest routeFastest route Details Preview"
+      ]
+    },
+    "long/toKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=40.0778%2C-105.5844&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=40.0778%2C-105.5844&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "cards": [
+        "31 min17.6 milesvia Brainard Lake Rd and CO-72 E Fastest route now, avoids road closureFastest route now, avoids road closure Details Preview"
+      ]
+    },
+    "mitchell/fromTrainCars": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=40.0831%2C-105.5817&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=40.0831%2C-105.5817&travelmode=driving",
+      "cards": [
+        "32 min17.7 milesvia CO-72 W and Brainard Lake Rd Fastest routeFastest route Details Preview"
+      ]
+    },
+    "mitchell/fromKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=40.0831%2C-105.5817&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=40.0831%2C-105.5817&travelmode=driving",
+      "cards": [
+        "32 min17.5 milesvia CO-72 W and Brainard Lake Rd Fastest routeFastest route Details Preview"
+      ]
+    },
+    "mitchell/toKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=40.0831%2C-105.5817&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=40.0831%2C-105.5817&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "cards": [
+        "31 min17.5 milesvia Brainard Lake Rd and CO-72 E Fastest route now, avoids road closureFastest route now, avoids road closure Details Preview"
+      ]
+    },
+    "niwot/fromTrainCars": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=40.076534093333336%2C-105.57734224000001&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9604095%2C-105.5100534&destination=40.076534093333336%2C-105.57734224000001&travelmode=driving",
+      "cards": [
+        "30 min17.1 milesvia CO-72 W and Brainard Lake Rd Fastest routeFastest route Details Preview"
+      ]
+    },
+    "niwot/fromKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=40.076534093333336%2C-105.57734224000001&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=39.9620592%2C-105.5115103&destination=40.076534093333336%2C-105.57734224000001&travelmode=driving",
+      "cards": [
+        "29 min16.9 milesvia CO-72 W and Brainard Lake Rd Fastest routeFastest route Details Preview"
+      ]
+    },
+    "niwot/toKathmandu": {
+      "requestedUrl": "https://www.google.com/maps/dir/?api=1&origin=40.076534093333336%2C-105.57734224000001&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "resolvedUrl": "https://www.google.com/maps/dir/?api=1&origin=40.076534093333336%2C-105.57734224000001&destination=39.9620592%2C-105.5115103&travelmode=driving",
+      "cards": [
+        "28 min16.9 milesvia Brainard Lake Rd and CO-72 E Fastest routeFastest route Details Preview"
+      ]
+    }
+  }
+}
