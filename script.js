@@ -1562,7 +1562,13 @@ const els = {
   postHikeLink: document.querySelector("#frosty-link"),
   actionsNote: document.querySelector("#actions-note"),
   supportLink: document.querySelector("#support-link"),
-  resourceLinks: document.querySelector("#resource-links")
+  resourceLinks: document.querySelector("#resource-links"),
+  driveDetails: document.querySelector("#drive-details"),
+  driveDestination: document.querySelector("#drive-destination"),
+  driveConfidence: document.querySelector("#drive-confidence"),
+  driveNote: document.querySelector("#drive-note"),
+  driveMethod: document.querySelector("#drive-method"),
+  driveSources: document.querySelector("#drive-sources")
 };
 
 let currentLocationCode = "MAD";
@@ -1972,6 +1978,7 @@ function resetResultCard(message) {
   els.coopDrive.textContent = "-";
   els.trailLength.textContent = "-";
   els.postHikeDrive.textContent = "-";
+  renderDrivingDetails(null);
   els.seasonNote.textContent = "-";
   setWeatherPlaceholder("Waiting for a trail pick.");
   renderWisdom();
@@ -2040,6 +2047,64 @@ function getTrailCoordinates(trail) {
 
 function formatEstimate(value) {
   return typeof value === "string" && value.trim() ? `~${value.trim()}` : "Not available";
+}
+
+function getDrivingAccess(trail, locationCode = currentLocationCode) {
+  if (typeof trailAccessData === "undefined") return null;
+  const id = trailAccessData.regions[locationCode]?.[trail.name];
+  const access = trailAccessData.destinations[id];
+  return access && validCoordinates(access.latitude, access.longitude) ? access : null;
+}
+
+function formatDriveEstimate(access, direction, legacyEstimate) {
+  const [minimum, maximum] = access?.rangeMinutes || [];
+  if (access?.estimates?.[direction] && Number.isFinite(minimum) && Number.isFinite(maximum)
+      && minimum > 0 && maximum > minimum) {
+    return `Approx. ${minimum}–${maximum} min`;
+  }
+  return formatEstimate(legacyEstimate);
+}
+
+function renderDrivingDetails(access) {
+  els.driveDetails.hidden = !access;
+  els.driveDetails.open = false;
+  els.driveSources.textContent = "";
+  els.driveDestination.textContent = "";
+  els.driveConfidence.textContent = "";
+  els.driveNote.textContent = "";
+  els.driveMethod.textContent = "";
+  if (!access) return;
+  els.driveDestination.textContent = `Driving destination: ${access.name}${access.approximateAccess ? " (approximate access point)" : ""}.`;
+  els.driveConfidence.textContent = `Destination confidence: ${access.confidence}. Drive time: approximate.`;
+  els.driveNote.textContent = access.note;
+  els.driveMethod.textContent = `Road routes checked ${trailAccessData.checkedOn}. Times use the named coffee shop and restaurant, with an allowance for uncertain access. Parking, shuttles and entrance queues are additional. These are saved planning estimates; check Maps for current travel time.`;
+  for (const source of [...access.sources,
+    { label: "Google Maps: route from the coffee shop", url: access.estimates.fromTrainCars.source },
+    { label: "Google Maps: return to the restaurant", url: access.estimates.toKathmandu.source }]) {
+    const item = document.createElement("li");
+    const link = document.createElement("a");
+    link.href = source.url;
+    link.textContent = source.label;
+    link.title = source.evidence || "Observed driving route; current conditions may differ.";
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    item.appendChild(link);
+    els.driveSources.appendChild(item);
+  }
+}
+
+function getTrailDrivingDestination(trail) {
+  const access = getDrivingAccess(trail);
+  return access ? `${access.latitude},${access.longitude}` : (trail.mapQuery || trail.address || trail.name);
+}
+
+function buildDirectionsUrl(origin, destination, waypoints = []) {
+  const params = new URLSearchParams({ api: "1", origin, destination, travelmode: "driving" });
+  const validWaypoints = waypoints.filter(point => validCoordinates(point.latitude, point.longitude));
+  if (validWaypoints.length) {
+    params.set("waypoints", validWaypoints.map(point => `${point.latitude},${point.longitude}`).join("|"));
+  }
+  return `https://www.google.com/maps/dir/?${params.toString()}`;
 }
 
 async function fetchJson(url, signal) {
@@ -2139,9 +2204,11 @@ function renderTrail(trail, bucketKey) {
   els.bucketLabel.textContent = getBucketLabel(bucketKey);
   els.trailName.textContent = trail.name;
   els.trailAddress.textContent = formatTrailAddress(trail);
-  els.coopDrive.textContent = formatEstimate(trail.coopDrive);
+  const drivingAccess = getDrivingAccess(trail);
+  els.coopDrive.textContent = formatDriveEstimate(drivingAccess, "fromTrainCars", trail.coopDrive);
   els.trailLength.textContent = formatEstimate(trail.trailLength);
-  els.postHikeDrive.textContent = formatEstimate(trail.postHikeDrive);
+  els.postHikeDrive.textContent = formatDriveEstimate(drivingAccess, "toKathmandu", trail.postHikeDrive);
+  renderDrivingDetails(drivingAccess);
   els.seasonNote.textContent = getTrailFeel(trail, location);
   els.rerollButton.disabled = false;
   window.clearTimeout(loadingTimerId);
@@ -2354,7 +2421,7 @@ async function getOriginForMaps() {
   }
 }
 
-async function openDirections(destination) {
+async function openDirections(destination, waypoints = []) {
   if (!currentTrail) return;
   const location = getLocationConfig();
 
@@ -2369,10 +2436,10 @@ async function openDirections(destination) {
 
   try {
     const origin = await getOriginForMaps();
-    const url = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}`;
+    const url = buildDirectionsUrl(origin, destination, waypoints);
     openedWindow.location.replace(url);
   } catch (error) {
-    const url = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(location.origin.address)}&destination=${encodeURIComponent(destination)}`;
+    const url = buildDirectionsUrl(location.origin.address, destination, waypoints);
     openedWindow.location.replace(url);
   } finally {
     els.actionsNote.textContent = `Map links use your current location if you allow it, otherwise they start from ${getLocationConfig().origin.name}.`;
@@ -2485,7 +2552,7 @@ els.rerollButton.addEventListener("click", () => {
 els.mapsLink.addEventListener("click", async (event) => {
   event.preventDefault();
   if (!currentTrail) return;
-  await openDirections(currentTrail.mapQuery || currentTrail.address || currentTrail.name);
+  await openDirections(getTrailDrivingDestination(currentTrail), getDrivingAccess(currentTrail)?.approachWaypoints);
 });
 els.postHikeLink.addEventListener("click", async (event) => {
   event.preventDefault();
